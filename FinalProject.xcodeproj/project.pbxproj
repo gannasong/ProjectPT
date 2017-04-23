@@ -9,10 +9,20 @@
 /* Begin PBXBuildFile section */
 		0647AA582D20B348D81B7F99 /* Pods_FinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD042307CD338B6159B1FD75 /* Pods_FinalProject.framework */; };
 		80E775041EAC6EEC009E553A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E775031EAC6EEC009E553A /* AppDelegate.swift */; };
-		80E775061EAC6EEC009E553A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E775051EAC6EEC009E553A /* ViewController.swift */; };
+		80E775061EAC6EEC009E553A /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E775051EAC6EEC009E553A /* LoginController.swift */; };
 		80E775091EAC6EEC009E553A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80E775071EAC6EEC009E553A /* Main.storyboard */; };
 		80E7750B1EAC6EEC009E553A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80E7750A1EAC6EEC009E553A /* Assets.xcassets */; };
 		80E7750E1EAC6EEC009E553A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80E7750C1EAC6EEC009E553A /* LaunchScreen.storyboard */; };
+		80E775161EAC7B5F009E553A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80E775151EAC7B5F009E553A /* GoogleService-Info.plist */; };
+		80E775181EAC7BC4009E553A /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E775171EAC7BC4009E553A /* Library.swift */; };
+		80E7751A1EAC7EFB009E553A /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E775191EAC7EFB009E553A /* Auth.swift */; };
+		80E7751C1EAC85CB009E553A /* ExamListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E7751B1EAC85CB009E553A /* ExamListTableViewController.swift */; };
+		80E7751E1EAC86C0009E553A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E7751D1EAC86C0009E553A /* MainViewController.swift */; };
+		80E775201EAC87EE009E553A /* LessonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E7751F1EAC87EE009E553A /* LessonTableViewController.swift */; };
+		80E775221EAC8CBA009E553A /* MainData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E775211EAC8CBA009E553A /* MainData.swift */; };
+		80E775241EAC94E0009E553A /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E775231EAC94E0009E553A /* MainCollectionViewCell.swift */; };
+		80E775261EAC96AD009E553A /* MainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80E775251EAC96AD009E553A /* MainCollectionViewCell.xib */; };
+		80E7752A1EACA6EC009E553A /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E775291EACA6EC009E553A /* DetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,11 +30,21 @@
 		6636096D8305B7067CBEF674 /* Pods-FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject.release.xcconfig"; sourceTree = "<group>"; };
 		80E775001EAC6EEC009E553A /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80E775031EAC6EEC009E553A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		80E775051EAC6EEC009E553A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		80E775051EAC6EEC009E553A /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		80E775081EAC6EEC009E553A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		80E7750A1EAC6EEC009E553A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80E7750D1EAC6EEC009E553A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80E7750F1EAC6EEC009E553A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80E775151EAC7B5F009E553A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		80E775171EAC7BC4009E553A /* Library.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
+		80E775191EAC7EFB009E553A /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		80E7751B1EAC85CB009E553A /* ExamListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamListTableViewController.swift; sourceTree = "<group>"; };
+		80E7751D1EAC86C0009E553A /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		80E7751F1EAC87EE009E553A /* LessonTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonTableViewController.swift; sourceTree = "<group>"; };
+		80E775211EAC8CBA009E553A /* MainData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainData.swift; sourceTree = "<group>"; };
+		80E775231EAC94E0009E553A /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		80E775251EAC96AD009E553A /* MainCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCollectionViewCell.xib; sourceTree = "<group>"; };
+		80E775291EACA6EC009E553A /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		DD042307CD338B6159B1FD75 /* Pods_FinalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -70,13 +90,39 @@
 			isa = PBXGroup;
 			children = (
 				80E775031EAC6EEC009E553A /* AppDelegate.swift */,
-				80E775051EAC6EEC009E553A /* ViewController.swift */,
+				80E775211EAC8CBA009E553A /* MainData.swift */,
+				80E775171EAC7BC4009E553A /* Library.swift */,
+				80E775191EAC7EFB009E553A /* Auth.swift */,
+				80E775281EACA001009E553A /* Login */,
+				80E775271EAC9FDA009E553A /* MainList */,
+				80E775291EACA6EC009E553A /* DetailTableViewController.swift */,
 				80E775071EAC6EEC009E553A /* Main.storyboard */,
 				80E7750A1EAC6EEC009E553A /* Assets.xcassets */,
 				80E7750C1EAC6EEC009E553A /* LaunchScreen.storyboard */,
 				80E7750F1EAC6EEC009E553A /* Info.plist */,
+				80E775151EAC7B5F009E553A /* GoogleService-Info.plist */,
 			);
 			path = FinalProject;
+			sourceTree = "<group>";
+		};
+		80E775271EAC9FDA009E553A /* MainList */ = {
+			isa = PBXGroup;
+			children = (
+				80E7751D1EAC86C0009E553A /* MainViewController.swift */,
+				80E775231EAC94E0009E553A /* MainCollectionViewCell.swift */,
+				80E775251EAC96AD009E553A /* MainCollectionViewCell.xib */,
+				80E7751B1EAC85CB009E553A /* ExamListTableViewController.swift */,
+				80E7751F1EAC87EE009E553A /* LessonTableViewController.swift */,
+			);
+			name = MainList;
+			sourceTree = "<group>";
+		};
+		80E775281EACA001009E553A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				80E775051EAC6EEC009E553A /* LoginController.swift */,
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 		E3848A0B5A83F06B7941D893 /* Pods */ = {
@@ -152,7 +198,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				80E7750E1EAC6EEC009E553A /* LaunchScreen.storyboard in Resources */,
+				80E775161EAC7B5F009E553A /* GoogleService-Info.plist in Resources */,
 				80E7750B1EAC6EEC009E553A /* Assets.xcassets in Resources */,
+				80E775261EAC96AD009E553A /* MainCollectionViewCell.xib in Resources */,
 				80E775091EAC6EEC009E553A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,8 +260,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80E775061EAC6EEC009E553A /* ViewController.swift in Sources */,
+				80E775221EAC8CBA009E553A /* MainData.swift in Sources */,
+				80E775241EAC94E0009E553A /* MainCollectionViewCell.swift in Sources */,
+				80E775061EAC6EEC009E553A /* LoginController.swift in Sources */,
 				80E775041EAC6EEC009E553A /* AppDelegate.swift in Sources */,
+				80E775181EAC7BC4009E553A /* Library.swift in Sources */,
+				80E7751E1EAC86C0009E553A /* MainViewController.swift in Sources */,
+				80E7752A1EACA6EC009E553A /* DetailTableViewController.swift in Sources */,
+				80E7751C1EAC85CB009E553A /* ExamListTableViewController.swift in Sources */,
+				80E7751A1EAC7EFB009E553A /* Auth.swift in Sources */,
+				80E775201EAC87EE009E553A /* LessonTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,7 +398,7 @@
 				DEVELOPMENT_TEAM = 8H7X36TF25;
 				INFOPLIST_FILE = FinalProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jexwang.FinalProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alphacamp.FinalProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -356,7 +412,7 @@
 				DEVELOPMENT_TEAM = 8H7X36TF25;
 				INFOPLIST_FILE = FinalProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jexwang.FinalProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alphacamp.FinalProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -381,6 +437,7 @@
 				80E775141EAC6EEC009E553A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

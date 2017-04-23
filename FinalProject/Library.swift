@@ -6,4 +6,14 @@
 //  Copyright © 2017年 jexwang. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class Library {
+    static func alert(title: String = "錯誤", message: String, needButton: Bool) -> UIAlertController {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        if needButton {
+            alert.addAction(UIAlertAction(title: "確定", style: .cancel, handler: nil))
+        }
+        return alert
+    }
+}
