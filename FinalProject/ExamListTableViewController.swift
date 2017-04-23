@@ -73,8 +73,11 @@ extension ExamListTableViewController: UICollectionViewDataSource, UICollectionV
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let maindata = mm.getArrat(id: collectionView.restorationIdentifier!)[indexPath.row]
-        NotificationCenter.default.post(name: Notification.Name("selected"), object: nil, userInfo: ["maindata" : maindata])
+//        let maindata = mm.getArrat(id: collectionView.restorationIdentifier!)[indexPath.row]
+//        NotificationCenter.default.post(name: Notification.Name("selected"), object: nil, userInfo: ["maindata" : maindata])
+        let id = collectionView.restorationIdentifier!
+        let row = indexPath.row
+        NotificationCenter.default.post(name: Notification.Name("selected"), object: nil, userInfo: ["id" : id, "row" : row])
     }
     
 }

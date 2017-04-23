@@ -19,7 +19,10 @@ class DetailTableViewController: UITableViewController {
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     
-    var maindata: Maindata!
+    let mm = MaindataManager.shareInstance()
+//    var maindata: Maindata!
+    var id: String!
+    var row: Int!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +32,8 @@ class DetailTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        let maindata = mm.getArrat(id: id)[row]
         
         titleLabel.text = maindata.title
         startLabel.text = maindata.start_date

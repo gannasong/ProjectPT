@@ -14,7 +14,9 @@ class MainViewController: UIViewController {
     @IBOutlet weak var examContainerVew: UIView!
     @IBOutlet weak var lessonContainerView: UIView!
     
-    var maindata: Maindata!
+//    var maindata: Maindata!
+    var id: String!
+    var row: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +35,10 @@ class MainViewController: UIViewController {
     }
     
     func selected(noti: Notification) {
-        maindata = noti.userInfo!["maindata"] as! Maindata
+//        maindata = noti.userInfo!["maindata"] as! Maindata
+        id = noti.userInfo!["id"] as! String
+        row = noti.userInfo!["row"] as! Int
+        
         performSegue(withIdentifier: "Detail", sender: self)
     }
     
@@ -50,7 +55,9 @@ class MainViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Detail" {
             let destinationController = segue.destination as! DetailTableViewController
-            destinationController.maindata = maindata
+//            destinationController.maindata = maindata
+            destinationController.id = id
+            destinationController.row = row
         }
     }
     
