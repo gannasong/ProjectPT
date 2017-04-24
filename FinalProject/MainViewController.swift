@@ -54,7 +54,7 @@ class MainViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Detail" {
-            let destinationController = segue.destination as! DetailTableViewController
+            let destinationController = segue.destination as! DetailViewController
 //            destinationController.maindata = maindata
             destinationController.id = id
             destinationController.row = row

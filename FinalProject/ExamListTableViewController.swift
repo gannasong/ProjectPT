@@ -33,6 +33,9 @@ class ExamListTableViewController: UITableViewController {
         androidCollectionView.register(nib, forCellWithReuseIdentifier: "Cell")
         webCollectionView.register(nib, forCellWithReuseIdentifier: "Cell")
         
+//        let collectionFlow = UICollectionViewFlowLayout
+//        collectionFlow.itemSize = CGSize(width: 10, height: 10)
+        
         NotificationCenter.default.addObserver(self, selector: #selector(reload), name: Notification.Name("reload"), object: nil)
     }
 

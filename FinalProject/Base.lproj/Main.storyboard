@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -298,12 +299,56 @@
             </objects>
             <point key="canvasLocation" x="2502" y="-207"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="lcR-Hc-Qvy">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="gAW-PM-uzx" customClass="DetailViewController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nQE-zl-W0F"/>
+                        <viewControllerLayoutGuide type="bottom" id="GQu-Mo-z2h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eQz-Mh-iDZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k1I-bp-Ksl">
+                                <rect key="frame" x="0.0" y="64" width="375" height="467"/>
+                                <connections>
+                                    <segue destination="dqn-sE-2Jm" kind="embed" identifier="DetailTableView" id="v9b-U5-c7Z"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2w-QN-Cao">
+                                <rect key="frame" x="16" y="555" width="81" height="30"/>
+                                <state key="normal" title="報名學生(0)"/>
+                                <connections>
+                                    <segue destination="zj9-9u-alb" kind="show" identifier="Students" id="ZGI-dP-oll"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="k1I-bp-Ksl" firstAttribute="height" secondItem="eQz-Mh-iDZ" secondAttribute="height" multiplier="0.7" id="4Rb-Bj-nZx"/>
+                            <constraint firstItem="k1I-bp-Ksl" firstAttribute="leading" secondItem="eQz-Mh-iDZ" secondAttribute="leading" id="YwN-n4-ekR"/>
+                            <constraint firstAttribute="trailing" secondItem="k1I-bp-Ksl" secondAttribute="trailing" id="but-hj-E72"/>
+                            <constraint firstItem="m2w-QN-Cao" firstAttribute="top" secondItem="k1I-bp-Ksl" secondAttribute="bottom" constant="24" id="f5m-w8-O8Z"/>
+                            <constraint firstItem="k1I-bp-Ksl" firstAttribute="top" secondItem="nQE-zl-W0F" secondAttribute="bottom" id="rTE-YM-qs2"/>
+                            <constraint firstItem="m2w-QN-Cao" firstAttribute="leading" secondItem="eQz-Mh-iDZ" secondAttribute="leadingMargin" id="tFL-rF-9k2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="studentsButton" destination="m2w-QN-Cao" id="yxq-5b-aw5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kai-PX-PSF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3304.8000000000002" y="138.98050974512745"/>
+        </scene>
         <!--詳細資訊-->
         <scene sceneID="e67-xb-59s">
             <objects>
                 <tableViewController id="dqn-sE-2Jm" customClass="DetailTableViewController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="L7z-tr-V7b">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="467"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -558,7 +603,68 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1xi-Qo-HbU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3400.8000000000002" y="138.98050974512745"/>
+            <point key="canvasLocation" x="3305" y="-493"/>
+        </scene>
+        <!--報名學生-->
+        <scene sceneID="qaD-lj-Gwq">
+            <objects>
+                <collectionViewController id="zj9-9u-alb" customClass="StudentsCollectionViewController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="joD-rW-pCz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OV0-25-cNK">
+                            <size key="itemSize" width="162" height="159"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StudentsCollectionViewCell" id="FwO-9n-Ufk" customClass="StudentsCollectionViewCell" customModule="FinalProject" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="162" height="159"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="162" height="159"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photoalbum" translatesAutoresizingMaskIntoConstraints="NO" id="Jjj-HN-jA1">
+                                            <rect key="frame" x="20" y="0.0" width="122" height="122"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="Jjj-HN-jA1" secondAttribute="height" id="qmw-c6-RP7"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3Y-41-tCi">
+                                            <rect key="frame" x="60" y="130" width="42" height="29"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="r3Y-41-tCi" firstAttribute="top" secondItem="Jjj-HN-jA1" secondAttribute="bottom" constant="8" id="7fE-sl-CY5"/>
+                                    <constraint firstItem="Jjj-HN-jA1" firstAttribute="top" secondItem="FwO-9n-Ufk" secondAttribute="top" id="8D1-jd-7As"/>
+                                    <constraint firstItem="r3Y-41-tCi" firstAttribute="centerX" secondItem="FwO-9n-Ufk" secondAttribute="centerX" id="HrO-c6-8OP"/>
+                                    <constraint firstItem="Jjj-HN-jA1" firstAttribute="leading" secondItem="FwO-9n-Ufk" secondAttribute="leading" constant="20" id="NCm-wL-Ti8"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jjj-HN-jA1" secondAttribute="trailing" constant="20" id="V2n-OL-pjV"/>
+                                    <constraint firstAttribute="bottom" secondItem="r3Y-41-tCi" secondAttribute="bottom" id="yvt-OI-gsH"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="nameLabel" destination="r3Y-41-tCi" id="0Tf-Ke-lbw"/>
+                                    <outlet property="studentImage" destination="Jjj-HN-jA1" id="nW6-0Q-4Ej"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="zj9-9u-alb" id="NOx-xI-Xru"/>
+                            <outlet property="delegate" destination="zj9-9u-alb" id="SlJ-wN-bxk"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="報名學生" id="WLy-Ap-yRU"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O4S-Pn-PJh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4101.6000000000004" y="138.98050974512745"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yA4-y3-TDL">
@@ -633,7 +739,7 @@
                         <outlet property="examContainerVew" destination="SPC-dY-ksx" id="fN2-HE-ABR"/>
                         <outlet property="lessonContainerView" destination="bwY-aM-ZGh" id="vpS-Vs-UaQ"/>
                         <outlet property="segmented" destination="moJ-7U-Cmf" id="ejc-nM-qLL"/>
-                        <segue destination="dqn-sE-2Jm" kind="show" identifier="Detail" id="oWF-NE-pWJ"/>
+                        <segue destination="gAW-PM-uzx" kind="show" identifier="Detail" id="zNK-aX-2QE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8gd-Zp-LPu" userLabel="First Responder" sceneMemberID="firstResponder"/>

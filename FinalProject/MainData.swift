@@ -16,8 +16,9 @@ class Maindata {
     var phone = ""
     var email = ""
     var category: [Dictionary<String, AnyObject>] = []
+    var contestant: [Dictionary<String, AnyObject>] = []
     
-    init(title:String, start_date:String,due_date:String, organiser: String, phone: String, email: String, category: [Dictionary<String, AnyObject>]) {
+    init(title:String, start_date:String,due_date:String, organiser: String, phone: String, email: String, category: [Dictionary<String, AnyObject>], contestant: [Dictionary<String, AnyObject>]) {
         self.title = title
         self.start_date = start_date
         self.due_date = due_date
@@ -25,6 +26,7 @@ class Maindata {
         self.phone = phone
         self.email = email
         self.category = category
+        self.contestant = contestant
     }
 }
 
@@ -45,7 +47,7 @@ class MaindataManager {
     private var webArray: [Maindata] = []
     
     private init() {
-        maindata = Maindata.init(title: "", start_date: "", due_date: "", organiser: "", phone: "", email: "", category: [])
+        maindata = Maindata.init(title: "", start_date: "", due_date: "", organiser: "", phone: "", email: "", category: [], contestant: [])
         enlightenmentArray = []
         gameArray = []
         iOSArray = []
@@ -66,7 +68,7 @@ class MaindataManager {
                             if let jsonArray = json["result"] as? NSArray {
                                 for i in 0..<jsonArray.count {
                                     if let item = jsonArray[i] as? Dictionary<String, AnyObject> {
-                                        let maindata = Maindata(title: item["title"] as! String, start_date: item["start_date"] as! String, due_date: item["due_date"] as! String, organiser: item["organiser"] as! String, phone: item["phone"] as! String, email: item["email"] as! String, category: item["category"] as! [Dictionary<String, AnyObject>])
+                                        let maindata = Maindata(title: item["title"] as! String, start_date: item["start_date"] as! String, due_date: item["due_date"] as! String, organiser: item["organiser"] as! String, phone: item["phone"] as! String, email: item["email"] as! String, category: item["category"] as! [Dictionary<String, AnyObject>], contestant: item["Contestant"] as! [Dictionary<String, AnyObject>])
                                         let category = maindata.category[0]
                                         switch category["category"] as! String {
                                         case "程式啟蒙":

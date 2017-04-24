@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0647AA582D20B348D81B7F99 /* Pods_FinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD042307CD338B6159B1FD75 /* Pods_FinalProject.framework */; };
+		8005DD861EAE12E8008C1C46 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8005DD851EAE12E8008C1C46 /* DetailViewController.swift */; };
+		8005DD881EAE15E1008C1C46 /* StudentsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8005DD871EAE15E1008C1C46 /* StudentsCollectionViewController.swift */; };
+		8005DD8A1EAE173A008C1C46 /* StudentsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8005DD891EAE173A008C1C46 /* StudentsCollectionViewCell.swift */; };
 		80E775041EAC6EEC009E553A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E775031EAC6EEC009E553A /* AppDelegate.swift */; };
 		80E775061EAC6EEC009E553A /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E775051EAC6EEC009E553A /* LoginController.swift */; };
 		80E775091EAC6EEC009E553A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80E775071EAC6EEC009E553A /* Main.storyboard */; };
@@ -28,6 +31,9 @@
 /* Begin PBXFileReference section */
 		634BDE4B6E1CACA76F1C8AD7 /* Pods-FinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject.debug.xcconfig"; sourceTree = "<group>"; };
 		6636096D8305B7067CBEF674 /* Pods-FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject.release.xcconfig"; sourceTree = "<group>"; };
+		8005DD851EAE12E8008C1C46 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		8005DD871EAE15E1008C1C46 /* StudentsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentsCollectionViewController.swift; sourceTree = "<group>"; };
+		8005DD891EAE173A008C1C46 /* StudentsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentsCollectionViewCell.swift; sourceTree = "<group>"; };
 		80E775001EAC6EEC009E553A /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80E775031EAC6EEC009E553A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80E775051EAC6EEC009E553A /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -95,7 +101,10 @@
 				80E775191EAC7EFB009E553A /* Auth.swift */,
 				80E775281EACA001009E553A /* Login */,
 				80E775271EAC9FDA009E553A /* MainList */,
+				8005DD851EAE12E8008C1C46 /* DetailViewController.swift */,
 				80E775291EACA6EC009E553A /* DetailTableViewController.swift */,
+				8005DD871EAE15E1008C1C46 /* StudentsCollectionViewController.swift */,
+				8005DD891EAE173A008C1C46 /* StudentsCollectionViewCell.swift */,
 				80E775071EAC6EEC009E553A /* Main.storyboard */,
 				80E7750A1EAC6EEC009E553A /* Assets.xcassets */,
 				80E7750C1EAC6EEC009E553A /* LaunchScreen.storyboard */,
@@ -260,7 +269,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8005DD861EAE12E8008C1C46 /* DetailViewController.swift in Sources */,
 				80E775221EAC8CBA009E553A /* MainData.swift in Sources */,
+				8005DD8A1EAE173A008C1C46 /* StudentsCollectionViewCell.swift in Sources */,
+				8005DD881EAE15E1008C1C46 /* StudentsCollectionViewController.swift in Sources */,
 				80E775241EAC94E0009E553A /* MainCollectionViewCell.swift in Sources */,
 				80E775061EAC6EEC009E553A /* LoginController.swift in Sources */,
 				80E775041EAC6EEC009E553A /* AppDelegate.swift in Sources */,
