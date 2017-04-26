@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OU0-W6-60n">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,14 +24,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="哥布林輔教平台" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ryy-6O-GKo">
-                                <rect key="frame" x="60.5" y="80" width="254.5" height="43"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="Bf6-x2-2dI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="801-2D-KQ3">
-                                <rect key="frame" x="60.5" y="318.5" width="254.5" height="30"/>
+                                <rect key="frame" x="120.5" y="318.5" width="135" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密碼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IA9-YX-bfQ">
                                         <rect key="frame" x="0.0" y="0.0" width="35" height="30"/>
@@ -40,7 +37,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="P@ssw0rd" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0B7-BC-sJ4">
-                                        <rect key="frame" x="45" y="0.0" width="209.5" height="30"/>
+                                        <rect key="frame" x="45" y="0.0" width="90" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -55,7 +52,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gwT-YC-JPe">
-                                <rect key="frame" x="60" y="264.5" width="254.5" height="30"/>
+                                <rect key="frame" x="86.5" y="264.5" width="202" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="帳號" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xc4-0N-lzR">
                                         <rect key="frame" x="0.0" y="0.0" width="35" height="30"/>
@@ -64,26 +61,35 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="jexwang@icloud.com" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M6n-Cg-6oT">
-                                        <rect key="frame" x="45" y="0.0" width="209.5" height="30"/>
+                                        <rect key="frame" x="45" y="0.0" width="157" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="KKD-4X-5hH">
+                                <rect key="frame" x="132" y="68" width="112.5" height="112.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="KKD-4X-5hH" secondAttribute="height" id="SD2-Pt-Te4"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Bf6-x2-2dI" secondAttribute="trailing" id="2d0-D5-5ew"/>
+                            <constraint firstItem="Bf6-x2-2dI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="31l-rj-Ha8"/>
                             <constraint firstItem="801-2D-KQ3" firstAttribute="top" secondItem="gwT-YC-JPe" secondAttribute="bottom" constant="24" id="5Qe-4C-LHN"/>
-                            <constraint firstItem="Ryy-6O-GKo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="8Ay-EW-WC3"/>
                             <constraint firstItem="Q3u-3m-knR" firstAttribute="top" secondItem="801-2D-KQ3" secondAttribute="bottom" constant="24" id="D2f-Wz-moB"/>
                             <constraint firstItem="801-2D-KQ3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IlK-k6-sRV"/>
+                            <constraint firstItem="Bf6-x2-2dI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JG3-Yn-Dnv"/>
                             <constraint firstItem="gwT-YC-JPe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KHe-O3-nPq"/>
-                            <constraint firstItem="Ryy-6O-GKo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MZ3-HP-dTH"/>
-                            <constraint firstItem="gwT-YC-JPe" firstAttribute="width" secondItem="Ryy-6O-GKo" secondAttribute="width" id="UxT-sK-B5J"/>
                             <constraint firstItem="801-2D-KQ3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W2M-CE-OBQ"/>
+                            <constraint firstItem="KKD-4X-5hH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="au6-ox-MjR"/>
                             <constraint firstItem="Q3u-3m-knR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bM6-UN-VJg"/>
-                            <constraint firstItem="801-2D-KQ3" firstAttribute="width" secondItem="Ryy-6O-GKo" secondAttribute="width" id="jEu-EZ-5Np"/>
+                            <constraint firstItem="KKD-4X-5hH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="48" id="gJj-Ks-b2d"/>
+                            <constraint firstItem="KKD-4X-5hH" firstAttribute="width" secondItem="Bf6-x2-2dI" secondAttribute="width" multiplier="0.3" id="jdi-PY-aaU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Bf6-x2-2dI" secondAttribute="bottom" id="nB5-Rk-RKE"/>
                         </constraints>
                     </view>
                     <connections>
@@ -94,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="39" y="139"/>
+            <point key="canvasLocation" x="37.600000000000001" y="138.98050974512745"/>
         </scene>
         <!--Exam List Table View Controller-->
         <scene sceneID="lFf-zi-hYG">
@@ -734,7 +740,13 @@
                             <constraint firstItem="moJ-7U-Cmf" firstAttribute="top" secondItem="5ky-nl-1gL" secondAttribute="bottom" constant="8" id="vdZ-hA-NOA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="主列表" id="fAF-U8-B3r"/>
+                    <navigationItem key="navigationItem" title="主列表" id="fAF-U8-B3r">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="dgM-Et-pGd">
+                            <connections>
+                                <action selector="testButton:" destination="PhF-9R-dLb" id="T66-Iv-1AR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="examContainerVew" destination="SPC-dY-ksx" id="fN2-HE-ABR"/>
                         <outlet property="lessonContainerView" destination="bwY-aM-ZGh" id="vpS-Vs-UaQ"/>
@@ -776,6 +788,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bg" width="375" height="667"/>
+        <image name="logo" width="144" height="144"/>
         <image name="photoalbum" width="64" height="64"/>
     </resources>
 </document>
