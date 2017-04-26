@@ -10,9 +10,7 @@ import UIKit
 
 class SideMenuTableViewController: UITableViewController{
 
-    
-    
-    
+
     @IBOutlet weak var sideUserImage: UIImageView!
     @IBOutlet weak var sideUserNameLabel: UILabel!
     
@@ -24,7 +22,7 @@ class SideMenuTableViewController: UITableViewController{
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         
         //頭像設置
-        sideUserImage.layer.cornerRadius = sideUserImage.bounds.width / 2
+        sideUserImage.layer.cornerRadius = sideUserImage.frame.width / 2
         sideUserImage.contentMode = .scaleAspectFill
         sideUserImage.clipsToBounds = true
     }

@@ -10,6 +10,13 @@ import UIKit
 
 class SettingTableViewCell: UITableViewCell {
 
+    
+    
+    
+    @IBOutlet weak var cellButton: UIButton!
+    @IBOutlet weak var cellLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
