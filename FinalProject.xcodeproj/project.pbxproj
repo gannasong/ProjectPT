@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0647AA582D20B348D81B7F99 /* Pods_FinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD042307CD338B6159B1FD75 /* Pods_FinalProject.framework */; };
+		495D053D1EB0E46200E8C293 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495D053C1EB0E46200E8C293 /* SideMenuTableViewController.swift */; };
+		495D05401EB0F6BB00E8C293 /* UserInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495D053F1EB0F6BB00E8C293 /* UserInfoTableViewController.swift */; };
+		495D05431EB0F6F300E8C293 /* ConnectionUsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495D05421EB0F6F300E8C293 /* ConnectionUsTableViewController.swift */; };
+		495D05461EB0F74400E8C293 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495D05451EB0F74400E8C293 /* SettingTableViewController.swift */; };
+		495D05481EB0F75900E8C293 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495D05471EB0F75900E8C293 /* SettingTableViewCell.swift */; };
 		8005DD861EAE12E8008C1C46 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8005DD851EAE12E8008C1C46 /* DetailViewController.swift */; };
 		8005DD881EAE15E1008C1C46 /* StudentsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8005DD871EAE15E1008C1C46 /* StudentsCollectionViewController.swift */; };
 		8005DD8A1EAE173A008C1C46 /* StudentsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8005DD891EAE173A008C1C46 /* StudentsCollectionViewCell.swift */; };
@@ -29,6 +34,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		495D053C1EB0E46200E8C293 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
+		495D053F1EB0F6BB00E8C293 /* UserInfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoTableViewController.swift; sourceTree = "<group>"; };
+		495D05421EB0F6F300E8C293 /* ConnectionUsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionUsTableViewController.swift; sourceTree = "<group>"; };
+		495D05451EB0F74400E8C293 /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		495D05471EB0F75900E8C293 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		634BDE4B6E1CACA76F1C8AD7 /* Pods-FinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject.debug.xcconfig"; sourceTree = "<group>"; };
 		6636096D8305B7067CBEF674 /* Pods-FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinalProject/Pods-FinalProject.release.xcconfig"; sourceTree = "<group>"; };
 		8005DD851EAE12E8008C1C46 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +84,43 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		495D053B1EB0E44800E8C293 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				495D053C1EB0E46200E8C293 /* SideMenuTableViewController.swift */,
+				495D05441EB0F6FB00E8C293 /* Setting */,
+				495D05411EB0F6C300E8C293 /* ConnectionUs */,
+				495D053E1EB0F67A00E8C293 /* UserInfo */,
+			);
+			name = SideMenu;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		495D053E1EB0F67A00E8C293 /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				495D053F1EB0F6BB00E8C293 /* UserInfoTableViewController.swift */,
+			);
+			name = UserInfo;
+			sourceTree = "<group>";
+		};
+		495D05411EB0F6C300E8C293 /* ConnectionUs */ = {
+			isa = PBXGroup;
+			children = (
+				495D05421EB0F6F300E8C293 /* ConnectionUsTableViewController.swift */,
+			);
+			name = ConnectionUs;
+			sourceTree = "<group>";
+		};
+		495D05441EB0F6FB00E8C293 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				495D05451EB0F74400E8C293 /* SettingTableViewController.swift */,
+				495D05471EB0F75900E8C293 /* SettingTableViewCell.swift */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
 		80E774F71EAC6EEC009E553A = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +146,7 @@
 				80E775211EAC8CBA009E553A /* MainData.swift */,
 				80E775171EAC7BC4009E553A /* Library.swift */,
 				80E775191EAC7EFB009E553A /* Auth.swift */,
+				495D053B1EB0E44800E8C293 /* SideMenu */,
 				80E775281EACA001009E553A /* Login */,
 				80E775271EAC9FDA009E553A /* MainList */,
 				8005DD851EAE12E8008C1C46 /* DetailViewController.swift */,
@@ -279,9 +327,14 @@
 				80E775181EAC7BC4009E553A /* Library.swift in Sources */,
 				80E7751E1EAC86C0009E553A /* MainViewController.swift in Sources */,
 				80E7752A1EACA6EC009E553A /* DetailTableViewController.swift in Sources */,
+				495D05401EB0F6BB00E8C293 /* UserInfoTableViewController.swift in Sources */,
 				80E7751C1EAC85CB009E553A /* ExamListTableViewController.swift in Sources */,
+				495D05481EB0F75900E8C293 /* SettingTableViewCell.swift in Sources */,
 				80E7751A1EAC7EFB009E553A /* Auth.swift in Sources */,
+				495D05461EB0F74400E8C293 /* SettingTableViewController.swift in Sources */,
 				80E775201EAC87EE009E553A /* LessonTableViewController.swift in Sources */,
+				495D053D1EB0E46200E8C293 /* SideMenuTableViewController.swift in Sources */,
+				495D05431EB0F6F300E8C293 /* ConnectionUsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
