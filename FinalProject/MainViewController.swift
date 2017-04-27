@@ -65,13 +65,13 @@ class MainViewController: UIViewController {
     
     
     @IBAction func testButton(_ sender: UIBarButtonItem) {
-        let order = ["authenticity_token" : "Wzyhl2m2UPIo+oMdJ6bmlh8uz08z40cSJCs42Dcbuxf9TSfcPf7nIHEIW8hprBi0ZN50RoekD1xWZvtNutQjhg==", "id" : 35, "title" : "手機端測試", "start_date" : "2017-05-05",
+        let order = ["authenticity_token" : Auth.token, "id" : 35, "title" : "手機端測試", "start_date" : "2017-05-05",
                      "due_date" : "2017-08-10",
                      "organiser" : "Jay",
                      "phone" : "0926623688",
                      "email" : "jexwang@icloud.com", "category" : ["category" : "Android程式"],
                      "Contestant": []] as [String : AnyObject]
-        let urlString = "https://fathomless-harbor-32460.herokuapp.com/games/35".addingPercentEncoding(withAllowedCharacters: CharacterSet.urlPathAllowed)!
+        let urlString = "https://fathomless-harbor-32460.herokuapp.com/api/v1/games".addingPercentEncoding(withAllowedCharacters: CharacterSet.urlPathAllowed)!
         if let url = URL(string: urlString) {
             var request = URLRequest(url: url,cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
 //            request.addValue(Auth.token, forHTTPHeaderField: "Content-Type")

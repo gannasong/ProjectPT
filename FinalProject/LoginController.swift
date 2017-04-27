@@ -11,20 +11,14 @@ import SVProgressHUD
 
 class LoginController: UIViewController {
     
-//    var gradientLayer: CAGradientLayer!
-    
+    @IBOutlet weak var bgImageView: UIImageView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var pwTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-//        createGradientLayer()
+        createGradientLayer()
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,14 +26,16 @@ class LoginController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-//    func createGradientLayer() {
-//        gradientLayer = CAGradientLayer()
-//        gradientLayer.frame = self.view.bounds
-//        gradientLayer.colors = [UIColor.red.cgColor, UIColor.yellow.cgColor]
-//        gradientLayer.borderColor = UIColor
-//        
-//        self.view.layer.addSublayer(gradientLayer)
-//    }
+    func createGradientLayer() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.view.bounds
+        gradientLayer.colors = [UIColor.init(ciColor: CIColor(red: 9/255, green: 101/255, blue: 190/255, alpha: 0.8)).cgColor, UIColor.init(ciColor: CIColor(red: 131/255, green: 221/255, blue: 93/255, alpha: 0.8)).cgColor]
+        self.bgImageView.layer.addSublayer(gradientLayer)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
 
     @IBAction func loginButton(_ sender: UIButton) {
         guard emailTextField.text != "" && pwTextField.text != "" else {
