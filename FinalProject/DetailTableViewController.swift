@@ -35,6 +35,10 @@ class DetailTableViewController: UITableViewController {
         
         let maindata = mm.getArrat(id: id)[row]
         
+        let url = maindata.image["medium"] as! Dictionary<String, String>
+        mm.getImage(urlString: url["url"]!) { (image) in
+            self.imageView.image = image
+        }
         titleLabel.text = maindata.title
         startLabel.text = maindata.start_date
         dueLabel.text = maindata.due_date

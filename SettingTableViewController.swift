@@ -33,7 +33,7 @@ class SettingTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //tableView.tableFooterView = UIView(frame: CGRect.zero)
+        
         //自適應高度
         self.setTableView.rowHeight = UITableViewAutomaticDimension
         self.setTableView.estimatedRowHeight = 35
@@ -63,7 +63,7 @@ class SettingTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = setTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = dataCellArray[indexPath.section][indexPath.row]
-        cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 13)
+        cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         
         cell.textLabel?.numberOfLines = 0
         print(dataCellArray[indexPath.section])
@@ -73,12 +73,12 @@ class SettingTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 20
+        return 30
     }
 
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerCell = setTableView.dequeueReusableCell(withIdentifier: "HeaderCell") as! SettingTableViewCell
-        
+        headerCell.cellLabel.font = UIFont.boldSystemFont(ofSize: 16)
         headerCell.cellLabel.text = dataSectionArray[section]
         
         headerCell.cellButton.tag =  666 + section

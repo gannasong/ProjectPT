@@ -93,28 +93,30 @@ class MainViewController: UIViewController {
     
     
     @IBAction func testButton(_ sender: UIBarButtonItem) {
-        let order = ["authenticity_token" : Auth.token, "id" : 35, "title" : "手機端測試", "start_date" : "2017-05-05",
-                     "due_date" : "2017-08-10",
-                     "organiser" : "Jay",
-                     "phone" : "0926623688",
-                     "email" : "jexwang@icloud.com", "category" : ["category" : "Android程式"],
-                     "Contestant": []] as [String : AnyObject]
-        let urlString = "https://fathomless-harbor-32460.herokuapp.com/api/v1/games".addingPercentEncoding(withAllowedCharacters: CharacterSet.urlPathAllowed)!
-        if let url = URL(string: urlString) {
-            var request = URLRequest(url: url,cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
-//            request.addValue(Auth.token, forHTTPHeaderField: "Content-Type")
-            request.httpMethod = "PATCH"
-            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            let data = try? JSONSerialization.data(withJSONObject: order, options: [])
-            let task = URLSession.shared.uploadTask(with: request, from: data, completionHandler: { (data, response, error) in
-                if error != nil {
-                    print(error!.localizedDescription)
-                } else {
-                    print("SUCCESS")
-                }
-            })
-            task.resume()
-        }
+//        let order = ["authenticity_token" : Auth.token, "id" : 35, "title" : "手機端測試", "start_date" : "2017-05-05",
+//                     "due_date" : "2017-08-10",
+//                     "organiser" : "Jay",
+//                     "phone" : "0926623688",
+//                     "email" : "jexwang@icloud.com", "category" : ["category" : "Android程式"],
+//                     "Contestant": []] as [String : AnyObject]
+//        let urlString = "https://fathomless-harbor-32460.herokuapp.com/api/v1/games".addingPercentEncoding(withAllowedCharacters: CharacterSet.urlPathAllowed)!
+//        if let url = URL(string: urlString) {
+//            var request = URLRequest(url: url,cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
+////            request.addValue(Auth.token, forHTTPHeaderField: "Content-Type")
+//            request.httpMethod = "PATCH"
+//            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+//            let data = try? JSONSerialization.data(withJSONObject: order, options: [])
+//            let task = URLSession.shared.uploadTask(with: request, from: data, completionHandler: { (data, response, error) in
+//                if error != nil {
+//                    print(error!.localizedDescription)
+//                } else {
+//                    print("SUCCESS")
+//                }
+//            })
+//            task.resume()
+//        }
+        
+        NotificationCenter.default.post(name: Notification.Name("test"), object: nil)
     }
     
 

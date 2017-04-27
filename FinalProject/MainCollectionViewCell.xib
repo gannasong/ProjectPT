@@ -57,6 +57,7 @@
             </constraints>
             <size key="customSize" width="228" height="220"/>
             <connections>
+                <outlet property="logoImageView" destination="piL-bG-laR" id="1sF-DD-DpL"/>
                 <outlet property="titleLabel" destination="wSX-b0-ISR" id="LBh-TF-wRh"/>
             </connections>
             <point key="canvasLocation" x="122.5" y="164"/>

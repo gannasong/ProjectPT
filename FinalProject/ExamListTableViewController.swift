@@ -37,11 +37,18 @@ class ExamListTableViewController: UITableViewController {
 //        collectionFlow.itemSize = CGSize(width: 10, height: 10)
         
         NotificationCenter.default.addObserver(self, selector: #selector(reload), name: Notification.Name("reload"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(test), name: Notification.Name("test"), object: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func test() {
+        let indexPath = IndexPath(row: 0, section: 2)
+        tableView.scrollToRow(at: indexPath, at: .top, animated: true)
     }
 
     func reload() {
@@ -69,6 +76,13 @@ extension ExamListTableViewController: UICollectionViewDataSource, UICollectionV
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! MainCollectionViewCell
         let maindata = mm.getArrat(id: collectionView.restorationIdentifier!)[indexPath.row]
+        
+        let url = maindata.image["medium"] as! Dictionary<String, String>
+        mm.getImage(urlString: url["url"]!) { (image) in
+            DispatchQueue.main.async {
+                cell.logoImageView.image = image
+            }
+        }
         
         cell.titleLabel.text = maindata.title
         
