@@ -16,4 +16,15 @@ class Library {
         }
         return alert
     }
+    
+    
+    
+    //傳送Noti通知
+    static func sentNoti(notiName: String) -> (){
+        let notiname = Notification.Name(rawValue: notiName)
+        NotificationCenter.default.post(name: notiname, object: nil)
+    }
+
+    
+
 }
