@@ -7,10 +7,9 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class DetailViewController: UIViewController {
-    
-    @IBOutlet weak var studentsButton: UIButton!
     
     let mm = MaindataManager.shareInstance()
     var id: String!
@@ -20,12 +19,29 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        studentsButton.setTitle("報名學生(\(mm.getArrat(id: id)[row].contestant.count))", for: .normal)
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func joinButton(_ sender: UIButton) {
+        let maindata = mm.getArray(id: id)[row]
+        if let url = URL(string: "https://fathomless-harbor-32460.herokuapp.com/api/v1/games/\(maindata.id)/attend?auth_token=\(Auth.token!)") {
+            var request = URLRequest(url: url,cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
+            request.httpMethod = "POST"
+            let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
+                if error != nil {
+                    print(error!.localizedDescription)
+                } else {
+                    SVProgressHUD.showSuccess(withStatus: "已完成")
+                    SVProgressHUD.dismiss(withDelay: 1.5)
+                }
+            })
+            task.resume()
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

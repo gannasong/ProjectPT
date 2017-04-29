@@ -75,7 +75,7 @@ extension ExamListTableViewController: UICollectionViewDataSource, UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! MainCollectionViewCell
-        let maindata = mm.getArrat(id: collectionView.restorationIdentifier!)[indexPath.row]
+        let maindata = mm.getArray(id: collectionView.restorationIdentifier!)[indexPath.row]
         
         let url = maindata.image["medium"] as! Dictionary<String, String>
         mm.getImage(urlString: url["url"]!) { (image) in

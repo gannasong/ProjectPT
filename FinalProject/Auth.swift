@@ -24,13 +24,14 @@ class Auth {
             if error != nil {
                 errorMessage = error!.localizedDescription
             } else {
-                Auth().signInToWeb(email: email, pw: pw)
+                Auth().signInToWeb(email: email, pw: pw, completion: {
+                    completion(errorMessage)
+                })
             }
-            completion(errorMessage)
         })
     }
     
-    private func signInToWeb(email: String, pw: String) {
+    private func signInToWeb(email: String, pw: String, completion: @escaping () -> Void) {
         if let url = URL(string: "https://fathomless-harbor-32460.herokuapp.com/api/v1/users/login?email=\(email)&password=\(pw)") {
             var request = URLRequest(url: url,cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
             request.httpMethod = "POST"
@@ -41,7 +42,8 @@ class Auth {
                     do {
                         let tokenDict = try JSONSerialization.jsonObject(with: data!, options: []) as? Dictionary<String, AnyObject>
                         Auth.token = tokenDict!["auth_token"] as! String
-                        print("TOKEN: \(Auth.token!)")
+//                        print("TOKEN: \(Auth.token!)")
+                        completion()
                     } catch {
                         print(error.localizedDescription)
                     }

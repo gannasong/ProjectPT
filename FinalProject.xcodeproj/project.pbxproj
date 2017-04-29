@@ -16,12 +16,12 @@
 		8005DD861EAE12E8008C1C46 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8005DD851EAE12E8008C1C46 /* DetailViewController.swift */; };
 		8005DD881EAE15E1008C1C46 /* StudentsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8005DD871EAE15E1008C1C46 /* StudentsCollectionViewController.swift */; };
 		8005DD8A1EAE173A008C1C46 /* StudentsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8005DD891EAE173A008C1C46 /* StudentsCollectionViewCell.swift */; };
+		802877131EB46A66009451F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 802877121EB46A66009451F8 /* GoogleService-Info.plist */; };
 		80E775041EAC6EEC009E553A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E775031EAC6EEC009E553A /* AppDelegate.swift */; };
 		80E775061EAC6EEC009E553A /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E775051EAC6EEC009E553A /* LoginController.swift */; };
 		80E775091EAC6EEC009E553A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80E775071EAC6EEC009E553A /* Main.storyboard */; };
 		80E7750B1EAC6EEC009E553A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80E7750A1EAC6EEC009E553A /* Assets.xcassets */; };
 		80E7750E1EAC6EEC009E553A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80E7750C1EAC6EEC009E553A /* LaunchScreen.storyboard */; };
-		80E775161EAC7B5F009E553A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80E775151EAC7B5F009E553A /* GoogleService-Info.plist */; };
 		80E775181EAC7BC4009E553A /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E775171EAC7BC4009E553A /* Library.swift */; };
 		80E7751A1EAC7EFB009E553A /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E775191EAC7EFB009E553A /* Auth.swift */; };
 		80E7751C1EAC85CB009E553A /* ExamListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E7751B1EAC85CB009E553A /* ExamListTableViewController.swift */; };
@@ -44,6 +44,8 @@
 		8005DD851EAE12E8008C1C46 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8005DD871EAE15E1008C1C46 /* StudentsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentsCollectionViewController.swift; sourceTree = "<group>"; };
 		8005DD891EAE173A008C1C46 /* StudentsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentsCollectionViewCell.swift; sourceTree = "<group>"; };
+		802877121EB46A66009451F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		802877141EB46B50009451F8 /* FinalProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinalProject.entitlements; sourceTree = "<group>"; };
 		80E775001EAC6EEC009E553A /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80E775031EAC6EEC009E553A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80E775051EAC6EEC009E553A /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -51,7 +53,6 @@
 		80E7750A1EAC6EEC009E553A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80E7750D1EAC6EEC009E553A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80E7750F1EAC6EEC009E553A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		80E775151EAC7B5F009E553A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		80E775171EAC7BC4009E553A /* Library.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		80E775191EAC7EFB009E553A /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		80E7751B1EAC85CB009E553A /* ExamListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamListTableViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +143,7 @@
 		80E775021EAC6EEC009E553A /* FinalProject */ = {
 			isa = PBXGroup;
 			children = (
+				802877141EB46B50009451F8 /* FinalProject.entitlements */,
 				80E775031EAC6EEC009E553A /* AppDelegate.swift */,
 				80E775211EAC8CBA009E553A /* MainData.swift */,
 				80E775171EAC7BC4009E553A /* Library.swift */,
@@ -157,7 +159,7 @@
 				80E7750A1EAC6EEC009E553A /* Assets.xcassets */,
 				80E7750C1EAC6EEC009E553A /* LaunchScreen.storyboard */,
 				80E7750F1EAC6EEC009E553A /* Info.plist */,
-				80E775151EAC7B5F009E553A /* GoogleService-Info.plist */,
+				802877121EB46A66009451F8 /* GoogleService-Info.plist */,
 			);
 			path = FinalProject;
 			sourceTree = "<group>";
@@ -226,8 +228,13 @@
 				TargetAttributes = {
 					80E774FF1EAC6EEC009E553A = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 8H7X36TF25;
+						DevelopmentTeam = YD5TB6T2X8;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -255,8 +262,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				80E7750E1EAC6EEC009E553A /* LaunchScreen.storyboard in Resources */,
-				80E775161EAC7B5F009E553A /* GoogleService-Info.plist in Resources */,
 				80E7750B1EAC6EEC009E553A /* Assets.xcassets in Resources */,
+				802877131EB46A66009451F8 /* GoogleService-Info.plist in Resources */,
 				80E775261EAC96AD009E553A /* MainCollectionViewCell.xib in Resources */,
 				80E775091EAC6EEC009E553A /* Main.storyboard in Resources */,
 			);
@@ -460,10 +467,12 @@
 			baseConfigurationReference = 634BDE4B6E1CACA76F1C8AD7 /* Pods-FinalProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8H7X36TF25;
+				CODE_SIGN_ENTITLEMENTS = FinalProject/FinalProject.entitlements;
+				DEVELOPMENT_TEAM = YD5TB6T2X8;
 				INFOPLIST_FILE = FinalProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alphacamp.FinalProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alphacamp.Goblinlab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -474,10 +483,12 @@
 			baseConfigurationReference = 6636096D8305B7067CBEF674 /* Pods-FinalProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8H7X36TF25;
+				CODE_SIGN_ENTITLEMENTS = FinalProject/FinalProject.entitlements;
+				DEVELOPMENT_TEAM = YD5TB6T2X8;
 				INFOPLIST_FILE = FinalProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alphacamp.FinalProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alphacamp.Goblinlab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

@@ -47,13 +47,15 @@ class MainViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(goSettingNoti(noti:)), name: notiSettingButton, object: nil)
         //接收轉場通知-登出帳號04
         //還沒設置完成
-        //let notiLogoutButton = Notification.Name("LogotAccount")
-        //NotificationCenter.default.addObserver(self, selector: #selector(), name: notiLogoutButton, object: nil)
+        let notiLogoutButton = Notification.Name("LogotAccount")
+        NotificationCenter.default.addObserver(self, selector: #selector(logout), name: notiLogoutButton, object: nil)
         
 
         // Do any additional setup after loading the view.
-        MaindataManager.shareInstance().callAPI {
-            NotificationCenter.default.post(name: Notification.Name("reload"), object: nil)
+        Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { _ in
+            MaindataManager.shareInstance().callAPI {
+                NotificationCenter.default.post(name: Notification.Name("reload"), object: nil)
+            }
         }
         
         NotificationCenter.default.addObserver(self, selector: #selector(selected(noti:)), name: Notification.Name("selected"), object: nil)
@@ -70,6 +72,10 @@ class MainViewController: UIViewController {
         row = noti.userInfo!["row"] as! Int
         
         performSegue(withIdentifier: "Detail", sender: self)
+    }
+    
+    func logout() {
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func segmented(_ sender: UISegmentedControl) {

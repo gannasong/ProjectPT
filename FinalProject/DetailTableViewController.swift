@@ -33,12 +33,13 @@ class DetailTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        let maindata = mm.getArrat(id: id)[row]
+        let maindata = mm.getArray(id: id)[row]
         
         let url = maindata.image["medium"] as! Dictionary<String, String>
         mm.getImage(urlString: url["url"]!) { (image) in
             self.imageView.image = image
         }
+        
         titleLabel.text = maindata.title
         startLabel.text = maindata.start_date
         dueLabel.text = maindata.due_date
@@ -50,6 +51,14 @@ class DetailTableViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return view.frame.width * 0.8
+        } else {
+            return tableView.rowHeight
+        }
     }
 
 }
