@@ -101,7 +101,7 @@
         <scene sceneID="lFf-zi-hYG">
             <objects>
                 <tableViewController id="Avc-e2-3B0" customClass="ExamListTableViewController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="CyX-ke-K0g">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="CyX-ke-K0g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="559"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -599,7 +599,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1xi-Qo-HbU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3304.8000000000002" y="-493.40329835082463"/>
+            <point key="canvasLocation" x="4127" y="81"/>
         </scene>
         <!--報名學生-->
         <scene sceneID="qaD-lj-Gwq">
@@ -692,8 +692,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="moJ-7U-Cmf">
-                                <rect key="frame" x="75" y="72" width="225" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="moJ-7U-Cmf">
+                                <rect key="frame" x="38" y="72" width="300" height="29"/>
                                 <segments>
                                     <segment title="測驗列表"/>
                                     <segment title="課程列表"/>
@@ -728,7 +728,7 @@
                             <constraint firstItem="LEa-Wy-vq5" firstAttribute="width" secondItem="e9O-ud-ZDk" secondAttribute="width" multiplier="0.5" id="Gf6-IT-EPI"/>
                             <constraint firstItem="SPC-dY-ksx" firstAttribute="top" secondItem="moJ-7U-Cmf" secondAttribute="bottom" constant="8" id="Odt-mm-JBl"/>
                             <constraint firstAttribute="trailing" secondItem="SPC-dY-ksx" secondAttribute="trailing" id="PFX-2m-1Cu"/>
-                            <constraint firstItem="moJ-7U-Cmf" firstAttribute="width" secondItem="e9O-ud-ZDk" secondAttribute="width" multiplier="0.6" id="Tjg-t6-Kdp"/>
+                            <constraint firstItem="moJ-7U-Cmf" firstAttribute="width" secondItem="e9O-ud-ZDk" secondAttribute="width" multiplier="0.8" id="Tjg-t6-Kdp"/>
                             <constraint firstItem="bwY-aM-ZGh" firstAttribute="leading" secondItem="e9O-ud-ZDk" secondAttribute="leading" id="Vqc-kt-ikA"/>
                             <constraint firstAttribute="trailing" secondItem="bwY-aM-ZGh" secondAttribute="trailing" id="Z6n-NR-r4h"/>
                             <constraint firstItem="LEa-Wy-vq5" firstAttribute="top" secondItem="5ky-nl-1gL" secondAttribute="bottom" id="buw-ef-a3m"/>
@@ -799,6 +799,10 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="1Xc-fA-mUZ" secondAttribute="height" multiplier="1:1" id="wvW-9b-Jki"/>
                                                     </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XD7-E1-KE6">
+                                                    <rect key="frame" x="-27" y="0.0" width="214" height="603"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -946,7 +950,10 @@
                                                     <rect key="frame" x="20" y="9" width="25" height="25"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q83-2q-X3u">
-                                                    <rect key="frame" x="65" y="6" width="31" height="30"/>
+                                                    <rect key="frame" x="65" y="6" width="60" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="q83-2q-X3u" secondAttribute="height" multiplier="2" id="5a0-oF-Qqk"/>
+                                                    </constraints>
                                                     <state key="normal" title="登出">
                                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
@@ -980,7 +987,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cp7-wa-6t0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-113" y="871"/>
+            <point key="canvasLocation" x="-114.40000000000001" y="870.31484257871068"/>
         </scene>
         <!--個人資訊-->
         <scene sceneID="Ptq-DK-2tr">
