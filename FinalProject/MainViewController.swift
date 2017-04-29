@@ -45,8 +45,10 @@ class MainViewController: UIViewController {
         //接收轉場通知-系統設定03
         let notiSettingButton = Notification.Name("ToSetting")
         NotificationCenter.default.addObserver(self, selector: #selector(goSettingNoti(noti:)), name: notiSettingButton, object: nil)
+        //接收轉場通知-線上客服05
+        let notionlineGmButton = Notification.Name("ToOnlineGm")
+        NotificationCenter.default.addObserver(self, selector: #selector(goOnlineGmNoti(noti:)), name: notionlineGmButton, object: nil)
         //接收轉場通知-登出帳號04
-        //還沒設置完成
         let notiLogoutButton = Notification.Name("LogotAccount")
         NotificationCenter.default.addObserver(self, selector: #selector(logout), name: notiLogoutButton, object: nil)
         
@@ -188,7 +190,16 @@ class MainViewController: UIViewController {
             self.performSegue(withIdentifier: "toSetting", sender: nil)
         }
     }
-
+    
+    //接收通知轉場05
+    func goOnlineGmNoti(noti:Notification) {
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: { 
+            self.view.layoutIfNeeded()
+        }) { _ in
+            self.performSegue(withIdentifier: "toOnlineGm", sender: nil)
+        }
+    }
+    
     /*
      //登出04-登出帳號並轉場
      func gologoutNoti(noti:Notification) {

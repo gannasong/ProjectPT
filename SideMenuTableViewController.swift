@@ -48,6 +48,11 @@ class SideMenuTableViewController: UITableViewController{
         Library.sentNoti(notiName: "ToSetting")
     }
     
+    //發送線上客服轉場通知
+    @IBAction func onlineGMButton(_ sender: UIButton) {
+        Library.sentNoti(notiName: "ToOnlineGm")
+    }
+    
     
     
     //發送登出通知
