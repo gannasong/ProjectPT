@@ -78,7 +78,7 @@ class Auth {
                     let userInfo = try? JSONSerialization.jsonObject(with: data!, options: []) as? Dictionary<String, AnyObject>
                     self.userInfoDic = userInfo!
                     completion(errorMessage)
-                    print(userInfo)
+                    print("$$$$$$$$$$$$$$$$$$$$$$\(userInfo)")
                 }
             })
             task.resume()
