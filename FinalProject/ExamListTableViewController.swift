@@ -27,6 +27,7 @@ class ExamListTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
         let nib = UINib(nibName: "MainCollectionViewCell", bundle: nil)
         enlightenmentCollectionView.register(nib, forCellWithReuseIdentifier: "Cell")
         gameCollectionView.register(nib, forCellWithReuseIdentifier: "Cell")
@@ -71,6 +72,39 @@ class ExamListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return view.frame.width * 0.6 + 20
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 32
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let tempView = UIImageView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 24))
+        tempView.image = UIImage(named: "AnfroidBar")
+        tempView.contentMode = .scaleAspectFill
+        
+        let tempLabel = UILabel(frame: CGRect(x: 15, y: 3, width: view.frame.width, height: 20))
+        
+        tempLabel.textColor = UIColor(red: 149.0/255.0, green: 173.0/255.0, blue: 97/255.0, alpha: 1)
+        
+        switch section {
+        case 0:
+            tempLabel.text = "程式啟蒙"
+        case 1:
+            tempLabel.text = "遊戲程式"
+        case 2:
+            tempLabel.text = "iOS程式"
+        case 3:
+            tempLabel.text = "Android程式"
+        case 4:
+            tempLabel.text = "網頁程式"
+        default:
+            break
+        }
+        
+        tempView.addSubview(tempLabel)
+        
+        return tempView
     }
     
 }

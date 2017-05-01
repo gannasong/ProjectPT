@@ -25,6 +25,7 @@ class OnlineGmViewController: JSQMessagesViewController {
         
         SVProgressHUD.show(withStatus: "連線中")
         ref.child("onlineGm").observe(.childAdded, with: { (snapShots) in
+            print("TEST")
             if let message = snapShots.value as? Dictionary<String, AnyObject> {
                 self.messageArray.append(message)
                 self.finishReceivingMessage(animated: true)
@@ -35,6 +36,7 @@ class OnlineGmViewController: JSQMessagesViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        SVProgressHUD.dismiss()
         ref.child("onlineGm").removeAllObservers()
     }
 

@@ -104,7 +104,7 @@
                         <outlet property="bgImageView" destination="Bf6-x2-2dI" id="w7h-YH-eDq"/>
                         <outlet property="emailTextField" destination="M6n-Cg-6oT" id="ebb-s7-6qf"/>
                         <outlet property="pwTextField" destination="0B7-BC-sJ4" id="pkQ-Va-whN"/>
-                        <segue destination="OU0-W6-60n" kind="show" identifier="Login" id="DNZ-9t-AWb"/>
+                        <segue destination="OU0-W6-60n" kind="presentation" identifier="Login" modalTransitionStyle="crossDissolve" id="DNZ-9t-AWb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -118,7 +118,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="CyX-ke-K0g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="559"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
                             <tableViewSection headerTitle="程式啟蒙" id="gwD-Mg-Xie">
                                 <cells>
@@ -627,7 +627,7 @@
         <scene sceneID="qaD-lj-Gwq">
             <objects>
                 <collectionViewController id="zj9-9u-alb" customClass="StudentsCollectionViewController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="joD-rW-pCz">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="joD-rW-pCz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -720,6 +720,7 @@
                                     <segment title="測驗列表"/>
                                     <segment title="課程列表"/>
                                 </segments>
+                                <color key="tintColor" red="0.58237326145172119" green="0.67873597145080566" blue="0.38077974319458008" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="segmented:" destination="PhF-9R-dLb" eventType="valueChanged" id="mxa-wN-Fco"/>
                                 </connections>
@@ -1134,27 +1135,27 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuMail" translatesAutoresizingMaskIntoConstraints="NO" id="2RR-wh-pdI">
                                                     <rect key="frame" x="25" y="9" width="25" height="25"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="信箱 /" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9Y-QV-c5u">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="信箱 /" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9Y-QV-c5u">
                                                     <rect key="frame" x="70" y="11" width="45" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x11-rJ-bZB">
-                                                    <rect key="frame" x="155" y="11.5" width="175" height="21"/>
+                                                    <rect key="frame" x="123" y="11.5" width="244" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="x11-rJ-bZB" secondAttribute="trailing" id="7Da-Mf-doK"/>
                                                 <constraint firstItem="x11-rJ-bZB" firstAttribute="centerY" secondItem="h3d-df-HMk" secondAttribute="centerY" id="7nN-S1-j4o"/>
-                                                <constraint firstAttribute="trailing" secondItem="x11-rJ-bZB" secondAttribute="trailing" constant="45" id="Rd9-WD-PB6"/>
                                                 <constraint firstItem="2RR-wh-pdI" firstAttribute="centerY" secondItem="h3d-df-HMk" secondAttribute="centerY" id="XJ6-dX-K9g"/>
                                                 <constraint firstItem="N9Y-QV-c5u" firstAttribute="centerY" secondItem="h3d-df-HMk" secondAttribute="centerY" id="ZfP-4Z-VI4"/>
                                                 <constraint firstItem="N9Y-QV-c5u" firstAttribute="leading" secondItem="2RR-wh-pdI" secondAttribute="trailing" constant="20" id="oH2-i4-f70"/>
                                                 <constraint firstItem="2RR-wh-pdI" firstAttribute="leading" secondItem="h3d-df-HMk" secondAttribute="leading" constant="25" id="oHM-9b-nrd"/>
-                                                <constraint firstItem="x11-rJ-bZB" firstAttribute="leading" secondItem="N9Y-QV-c5u" secondAttribute="trailing" constant="40" id="z2K-VP-2Cz"/>
+                                                <constraint firstItem="x11-rJ-bZB" firstAttribute="leading" secondItem="N9Y-QV-c5u" secondAttribute="trailing" constant="8" id="trp-X6-4N6"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
