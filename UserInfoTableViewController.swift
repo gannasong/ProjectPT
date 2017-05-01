@@ -17,7 +17,7 @@ class UserInfoTableViewController: UITableViewController,UINavigationControllerD
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
-    
+    let mm = MaindataManager.shareInstance()
     
     
     func infoLabel(sender:Bool) {
@@ -39,6 +39,18 @@ class UserInfoTableViewController: UITableViewController,UINavigationControllerD
         numberLabel.text = Auth.userInfoDic["student_id"] as? String
         emailLabel.text = Auth.userInfoDic["email"] as? String
         phoneLabel.text = Auth.userInfoDic["phone"] as? String
+        
+        if let tryImage = Auth.userInfoDic["file_location"]!["medium"] as? Dictionary<String,String> {
+            if let getImageUrlString = tryImage["url"] {
+                mm.getImage(urlString: getImageUrlString, completion: { (image) in
+                    self.userImageView.image = image
+                    self.userImageView.contentMode = .scaleAspectFill
+                    self.userImageView.clipsToBounds = true
+                    
+                })
+            }
+        }
+        
         
     }
     

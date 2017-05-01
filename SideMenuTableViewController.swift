@@ -14,7 +14,7 @@ class SideMenuTableViewController: UITableViewController{
     @IBOutlet weak var sideUserImage: UIImageView!
     @IBOutlet weak var sideUserNameLabel: UILabel!
     
-    
+    let mm = MaindataManager.shareInstance()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +26,16 @@ class SideMenuTableViewController: UITableViewController{
         sideUserImage.clipsToBounds = true
         
         sideUserNameLabel.text = Auth.userInfoDic["name"] as? String
+        if let tryImage = Auth.userInfoDic["file_location"]!["medium"] as? Dictionary<String,String> {
+            if let getImageUrlString = tryImage["url"] {
+                mm.getImage(urlString: getImageUrlString, completion: { (image) in
+                    self.sideUserImage.image = image
+                })
+                
+                
+            }
+        }
+        
         
     }
 
