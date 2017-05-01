@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,37 +21,37 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photoalbum" translatesAutoresizingMaskIntoConstraints="NO" id="piL-bG-laR">
                         <rect key="frame" x="0.0" y="0.0" width="211" height="196"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </imageView>
                     <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gup-8b-lXK">
-                        <rect key="frame" x="0.0" y="175.5" width="211" height="20.5"/>
+                        <rect key="frame" x="0.0" y="176.5" width="211" height="19.5"/>
                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="8kQ-DQ-xWW">
-                            <rect key="frame" x="0.0" y="0.0" width="211" height="20.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="211" height="19.5"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSX-b0-ISR">
-                                    <rect key="frame" x="84" y="0.0" width="42" height="20.5"/>
+                                    <rect key="frame" x="84" y="-1" width="42" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                             <constraints>
-                                <constraint firstAttribute="bottom" secondItem="wSX-b0-ISR" secondAttribute="bottom" id="QHH-4s-AH6"/>
+                                <constraint firstItem="wSX-b0-ISR" firstAttribute="centerY" secondItem="8kQ-DQ-xWW" secondAttribute="centerY" id="28x-ue-DBT"/>
                                 <constraint firstItem="wSX-b0-ISR" firstAttribute="centerX" secondItem="8kQ-DQ-xWW" secondAttribute="centerX" id="jhc-Ba-MRT"/>
                             </constraints>
                         </view>
-                        <constraints>
-                            <constraint firstAttribute="height" secondItem="wSX-b0-ISR" secondAttribute="height" id="auI-3B-7VL"/>
-                        </constraints>
                         <blurEffect style="light"/>
                     </visualEffectView>
                 </subviews>
             </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="gup-8b-lXK" secondAttribute="bottom" id="D3L-Ca-VEc"/>
                 <constraint firstItem="piL-bG-laR" firstAttribute="top" secondItem="dxM-YM-z1k" secondAttribute="top" id="D4B-cf-jKF"/>
                 <constraint firstItem="piL-bG-laR" firstAttribute="leading" secondItem="dxM-YM-z1k" secondAttribute="leading" id="SiA-6b-sVZ"/>
                 <constraint firstAttribute="trailing" secondItem="gup-8b-lXK" secondAttribute="trailing" id="UIp-80-BK9"/>
+                <constraint firstItem="gup-8b-lXK" firstAttribute="height" secondItem="dxM-YM-z1k" secondAttribute="height" multiplier="0.1" id="XvX-2f-ICx"/>
                 <constraint firstAttribute="bottom" secondItem="piL-bG-laR" secondAttribute="bottom" id="jSQ-TF-N61"/>
                 <constraint firstItem="gup-8b-lXK" firstAttribute="leading" secondItem="dxM-YM-z1k" secondAttribute="leading" id="juZ-aF-JBy"/>
                 <constraint firstAttribute="trailing" secondItem="piL-bG-laR" secondAttribute="trailing" id="vV1-PA-PGn"/>

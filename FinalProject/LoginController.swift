@@ -19,6 +19,10 @@ class LoginController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         createGradientLayer()
+        
+        if let email = UserDefaults.standard.string(forKey: "email") {
+            emailTextField.text = email
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,8 +53,8 @@ class LoginController: UIViewController {
                 SVProgressHUD.dismiss()
                 self.present(Library.alert(message: error!, needButton: true), animated: true, completion: nil)
             } else {
+                UserDefaults.standard.set(self.emailTextField.text!, forKey: "email")
                 SVProgressHUD.showSuccess(withStatus: "登入成功")
-                SVProgressHUD.dismiss(withDelay: 1)
                 self.performSegue(withIdentifier: "Login", sender: self)
             }
         }

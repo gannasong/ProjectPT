@@ -30,6 +30,7 @@ class DetailViewController: UIViewController {
     @IBAction func joinButton(_ sender: UIButton) {
         let maindata = mm.getArray(id: id)[row]
         if let url = URL(string: "https://fathomless-harbor-32460.herokuapp.com/api/v1/games/\(maindata.id)/attend?auth_token=\(Auth.token!)") {
+            SVProgressHUD.show(withStatus: "處理中")
             var request = URLRequest(url: url,cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
             request.httpMethod = "POST"
             let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in

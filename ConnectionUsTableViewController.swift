@@ -44,14 +44,14 @@ class ConnectionUsTableViewController: UITableViewController, MFMailComposeViewC
     //官方電話
     @IBAction func connectionPhone(_ sender: UIButton) {
         let url:NSURL = URL(string: "TEL:0282752408")! as NSURL
-        UIApplication.shared.open(url as! URL, options: [:], completionHandler: nil)
+        UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
     }
     
     
     //專員手機
     @IBAction func connectionMobile(_ sender: UIButton) {
         let url:NSURL = URL(string: "TEL:0988238583")! as NSURL
-        UIApplication.shared.open(url as! URL, options: [:], completionHandler: nil)
+        UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
     }
     
     

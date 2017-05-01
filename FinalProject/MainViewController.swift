@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class MainViewController: UIViewController {
 
@@ -54,13 +55,18 @@ class MainViewController: UIViewController {
         
 
         // Do any additional setup after loading the view.
-        Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { _ in
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { _ in
             MaindataManager.shareInstance().callAPI {
-                NotificationCenter.default.post(name: Notification.Name("reload"), object: nil)
+                DispatchQueue.main.async {
+                    NotificationCenter.default.post(name: Notification.Name("reload"), object: nil)
+                    SVProgressHUD.dismiss(withDelay: 1)
+                }
             }
         }
-        
+    
         NotificationCenter.default.addObserver(self, selector: #selector(selected(noti:)), name: Notification.Name("selected"), object: nil)
+        
+        SVProgressHUD.show(withStatus: "讀取中")
     }
 
     override func didReceiveMemoryWarning() {
@@ -99,37 +105,6 @@ class MainViewController: UIViewController {
         }
     }
     
-    
-    @IBAction func testButton(_ sender: UIBarButtonItem) {
-//        let order = ["authenticity_token" : Auth.token, "id" : 35, "title" : "手機端測試", "start_date" : "2017-05-05",
-//                     "due_date" : "2017-08-10",
-//                     "organiser" : "Jay",
-//                     "phone" : "0926623688",
-//                     "email" : "jexwang@icloud.com", "category" : ["category" : "Android程式"],
-//                     "Contestant": []] as [String : AnyObject]
-//        let urlString = "https://fathomless-harbor-32460.herokuapp.com/api/v1/games".addingPercentEncoding(withAllowedCharacters: CharacterSet.urlPathAllowed)!
-//        if let url = URL(string: urlString) {
-//            var request = URLRequest(url: url,cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
-////            request.addValue(Auth.token, forHTTPHeaderField: "Content-Type")
-//            request.httpMethod = "PATCH"
-//            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-//            let data = try? JSONSerialization.data(withJSONObject: order, options: [])
-//            let task = URLSession.shared.uploadTask(with: request, from: data, completionHandler: { (data, response, error) in
-//                if error != nil {
-//                    print(error!.localizedDescription)
-//                } else {
-//                    print("SUCCESS")
-//                }
-//            })
-//            task.resume()
-//        }
-        
-        NotificationCenter.default.post(name: Notification.Name("test"), object: nil)
-    }
-    
-
-    
-    
     @IBAction func openSideMemu(_ sender: UIBarButtonItem) {
         if sideMenuShowing {
             leadingContain.constant = -(UIScreen.main.bounds.width * 0.5 + 10)
@@ -138,12 +113,16 @@ class MainViewController: UIViewController {
                 //告訴view要執行位置改變，立即實現佈局
                 self.view.layoutIfNeeded()
             }, completion: nil)
+            
+            examContainerVew.isUserInteractionEnabled = true
         } else {
             leadingContain.constant = 0
             
             UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: {
                 self.view.layoutIfNeeded()
             }, completion: nil)
+            
+            examContainerVew.isUserInteractionEnabled = false
         }
         //變更sideMemu狀態
         sideMenuShowing = !sideMenuShowing
@@ -160,6 +139,8 @@ class MainViewController: UIViewController {
                 self.view.layoutIfNeeded()
             }, completion: nil)
             sideMenuShowing = false
+            
+            examContainerVew.isUserInteractionEnabled = true
         }
     }
 

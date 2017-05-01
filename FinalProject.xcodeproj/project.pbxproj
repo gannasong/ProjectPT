@@ -16,6 +16,7 @@
 		8005DD861EAE12E8008C1C46 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8005DD851EAE12E8008C1C46 /* DetailViewController.swift */; };
 		8005DD881EAE15E1008C1C46 /* StudentsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8005DD871EAE15E1008C1C46 /* StudentsCollectionViewController.swift */; };
 		8005DD8A1EAE173A008C1C46 /* StudentsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8005DD891EAE173A008C1C46 /* StudentsCollectionViewCell.swift */; };
+		800732791EB62B4C0019EC52 /* OnlineGmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800732781EB62B4C0019EC52 /* OnlineGmViewController.swift */; };
 		802877131EB46A66009451F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 802877121EB46A66009451F8 /* GoogleService-Info.plist */; };
 		80E775041EAC6EEC009E553A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E775031EAC6EEC009E553A /* AppDelegate.swift */; };
 		80E775061EAC6EEC009E553A /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E775051EAC6EEC009E553A /* LoginController.swift */; };
@@ -44,6 +45,7 @@
 		8005DD851EAE12E8008C1C46 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8005DD871EAE15E1008C1C46 /* StudentsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentsCollectionViewController.swift; sourceTree = "<group>"; };
 		8005DD891EAE173A008C1C46 /* StudentsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentsCollectionViewCell.swift; sourceTree = "<group>"; };
+		800732781EB62B4C0019EC52 /* OnlineGmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnlineGmViewController.swift; sourceTree = "<group>"; };
 		802877121EB46A66009451F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		802877141EB46B50009451F8 /* FinalProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinalProject.entitlements; sourceTree = "<group>"; };
 		80E775001EAC6EEC009E553A /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +94,7 @@
 				495D05441EB0F6FB00E8C293 /* Setting */,
 				495D05411EB0F6C300E8C293 /* ConnectionUs */,
 				495D053E1EB0F67A00E8C293 /* UserInfo */,
+				800732771EB62A510019EC52 /* onlineGM */,
 			);
 			name = SideMenu;
 			path = ..;
@@ -120,6 +123,14 @@
 				495D05471EB0F75900E8C293 /* SettingTableViewCell.swift */,
 			);
 			name = Setting;
+			sourceTree = "<group>";
+		};
+		800732771EB62A510019EC52 /* onlineGM */ = {
+			isa = PBXGroup;
+			children = (
+				800732781EB62B4C0019EC52 /* OnlineGmViewController.swift */,
+			);
+			name = onlineGM;
 			sourceTree = "<group>";
 		};
 		80E774F71EAC6EEC009E553A = {
@@ -337,6 +348,7 @@
 				495D05401EB0F6BB00E8C293 /* UserInfoTableViewController.swift in Sources */,
 				80E7751C1EAC85CB009E553A /* ExamListTableViewController.swift in Sources */,
 				495D05481EB0F75900E8C293 /* SettingTableViewCell.swift in Sources */,
+				800732791EB62B4C0019EC52 /* OnlineGmViewController.swift in Sources */,
 				80E7751A1EAC7EFB009E553A /* Auth.swift in Sources */,
 				495D05461EB0F74400E8C293 /* SettingTableViewController.swift in Sources */,
 				80E775201EAC87EE009E553A /* LessonTableViewController.swift in Sources */,

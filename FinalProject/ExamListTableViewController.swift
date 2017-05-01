@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class ExamListTableViewController: UITableViewController {
     
@@ -33,32 +34,43 @@ class ExamListTableViewController: UITableViewController {
         androidCollectionView.register(nib, forCellWithReuseIdentifier: "Cell")
         webCollectionView.register(nib, forCellWithReuseIdentifier: "Cell")
         
-//        let collectionFlow = UICollectionViewFlowLayout
-//        collectionFlow.itemSize = CGSize(width: 10, height: 10)
+        let size = view.frame.width * 0.6
+        
+        enlightenmentCollectionView.frame.size.height = size + 20
+        gameCollectionView.frame.size.height = size + 20
+        iOSCollectionView.frame.size.height = size + 20
+        androidCollectionView.frame.size.height = size + 20
+        webCollectionView.frame.size.height = size + 20
+        
+        let enlightenmentLayout = enlightenmentCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        enlightenmentLayout.itemSize = CGSize(width: size, height: size)
+        let gameCollectionLayout = gameCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        gameCollectionLayout.itemSize = CGSize(width: size, height: size)
+        let iOSCollectionLayout = iOSCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        iOSCollectionLayout.itemSize = CGSize(width: size, height: size)
+        let androidCollectionLayout = androidCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        androidCollectionLayout.itemSize = CGSize(width: size, height: size)
+        let webCollectionLayout = webCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        webCollectionLayout.itemSize = CGSize(width: size, height: size)
         
         NotificationCenter.default.addObserver(self, selector: #selector(reload), name: Notification.Name("reload"), object: nil)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(test), name: Notification.Name("test"), object: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func test() {
-        let indexPath = IndexPath(row: 0, section: 2)
-        tableView.scrollToRow(at: indexPath, at: .top, animated: true)
-    }
 
     func reload() {
-        DispatchQueue.main.async {
-            self.enlightenmentCollectionView.reloadData()
-            self.gameCollectionView.reloadData()
-            self.iOSCollectionView.reloadData()
-            self.androidCollectionView.reloadData()
-            self.webCollectionView.reloadData()
-        }
+        enlightenmentCollectionView.reloadData()
+        gameCollectionView.reloadData()
+        iOSCollectionView.reloadData()
+        androidCollectionView.reloadData()
+        webCollectionView.reloadData()
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return view.frame.width * 0.6 + 20
     }
     
 }
@@ -85,6 +97,7 @@ extension ExamListTableViewController: UICollectionViewDataSource, UICollectionV
         }
         
         cell.titleLabel.text = maindata.title
+        cell.backgroundColor = UIColor.clear
         
         return cell
     }
