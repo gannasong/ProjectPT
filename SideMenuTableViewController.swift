@@ -20,11 +20,13 @@ class SideMenuTableViewController: UITableViewController{
         super.viewDidLoad()
         //隔線消失
         tableView.tableFooterView = UIView(frame: CGRect.zero)
-        
         //頭像設置
         sideUserImage.layer.cornerRadius = sideUserImage.frame.width / 2
         sideUserImage.contentMode = .scaleAspectFill
         sideUserImage.clipsToBounds = true
+        
+        sideUserNameLabel.text = Auth.userInfoDic["name"] as? String
+        
     }
 
     

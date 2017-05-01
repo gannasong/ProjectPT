@@ -18,19 +18,7 @@ class UserInfoTableViewController: UITableViewController,UINavigationControllerD
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     
-    @IBOutlet weak var nameField: UITextField!
-    @IBOutlet weak var classField: UITextField!
-    @IBOutlet weak var numberField: UITextField!
-    @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var phoneField: UITextField!
     
-    func infoField(sender:Bool) {
-        nameField.isHidden = sender
-        classField.isHidden = sender
-        numberField.isHidden = sender
-        emailField.isHidden = sender
-        phoneField.isHidden = sender
-    }
     
     func infoLabel(sender:Bool) {
         nameLabel.isHidden = sender
@@ -45,7 +33,13 @@ class UserInfoTableViewController: UITableViewController,UINavigationControllerD
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView(frame: CGRect.zero)
-        infoField(sender: true)
+        
+        nameLabel.text = Auth.userInfoDic["name"] as? String
+        classLabel.text = Auth.userInfoDic["classroom"] as? String
+        numberLabel.text = Auth.userInfoDic["student_id"] as? String
+        emailLabel.text = Auth.userInfoDic["email"] as? String
+        phoneLabel.text = Auth.userInfoDic["phone"] as? String
+        
     }
     
     //返回主頁
@@ -55,29 +49,29 @@ class UserInfoTableViewController: UITableViewController,UINavigationControllerD
     
     
     
-    //修改個人資料
-    @IBAction func editUserInfo(_ sender: UIButton) {
-        if sender.title(for: .normal) == "編輯個人資料" {
-            nameField.text = nameLabel.text
-            classField.text = classLabel.text
-            numberField.text = numberLabel.text
-            emailField.text = emailLabel.text
-            phoneField.text = phoneLabel.text
-            infoLabel(sender: true)
-            infoField(sender: false)
-            sender.setTitle("確定修改資料", for: .normal)
-        } else {
-            nameLabel.text = nameField.text
-            classLabel.text = classField.text
-            numberLabel.text = numberField.text
-            emailLabel.text = emailField.text
-            phoneLabel.text = phoneField.text
-            infoLabel(sender: false)
-            infoField(sender: true)
-            sender.setTitle("編輯個人資料", for: .normal)
-        }
-
-    }
+//    //修改個人資料
+//    @IBAction func editUserInfo(_ sender: UIButton) {
+//        if sender.title(for: .normal) == "編輯個人資料" {
+//            nameField.text = nameLabel.text
+//            classField.text = classLabel.text
+//            numberField.text = numberLabel.text
+//            emailField.text = emailLabel.text
+//            phoneField.text = phoneLabel.text
+//            infoLabel(sender: true)
+//            infoField(sender: false)
+//            sender.setTitle("確定修改資料", for: .normal)
+//        } else {
+//            nameLabel.text = nameField.text
+//            classLabel.text = classField.text
+//            numberLabel.text = numberField.text
+//            emailLabel.text = emailField.text
+//            phoneLabel.text = phoneField.text
+//            infoLabel(sender: false)
+//            infoField(sender: true)
+//            sender.setTitle("編輯個人資料", for: .normal)
+//        }
+//
+//    }
     
     
     //選照片
