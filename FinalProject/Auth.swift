@@ -12,6 +12,8 @@ import FirebaseAuth
 class Auth {
     
     static var token: String!
+    static var id : Int!
+    static var userInfoDic: Dictionary<String, AnyObject>!
     
     static func userInformation() -> (uid: String, email: String) {
         let user = FIRAuth.auth()!.currentUser!
@@ -43,7 +45,15 @@ class Auth {
                     do {
                         let tokenDict = try JSONSerialization.jsonObject(with: data!, options: []) as? Dictionary<String, AnyObject>
                         Auth.token = tokenDict!["auth_token"] as! String
-                        completion(nil)
+                        Auth.id = tokenDict!["user_id"] as! Int
+                        //取個人資料
+                        Auth.userInfo(completion: { (error) in
+                            if error != nil {
+                                completion(error)
+                            } else {
+                                completion(nil)
+                            }
+                        })
                     } catch {
                         completion(error.localizedDescription)
                     }
@@ -52,4 +62,46 @@ class Auth {
             task.resume()
         }
     }
+    
+    
+    //userInformation
+    static func userInfo(completion:@escaping (_ error:String?) -> Void)  {
+        if let url = URL(string: "https://fathomless-harbor-32460.herokuapp.com/api/v1/users/\(Auth.id!)/profile?auth_token=\(Auth.token!)"){
+            var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 10)
+            request.httpMethod = "POST"
+            let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
+                var errorMessage:String?
+                if error != nil {
+                    errorMessage = error?.localizedDescription
+                    completion(errorMessage)
+                } else {
+                    let userInfo = try? JSONSerialization.jsonObject(with: data!, options: []) as? Dictionary<String, AnyObject>
+                    self.userInfoDic = userInfo!
+                    completion(errorMessage)
+                    print(userInfo)
+                }
+            })
+            task.resume()
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
