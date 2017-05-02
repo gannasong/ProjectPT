@@ -19,7 +19,8 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        let maindata = mm.getArray(id: id)[row]
+        navigationItem.title = maindata.title
     }
 
     override func didReceiveMemoryWarning() {

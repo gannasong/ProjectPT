@@ -25,13 +25,15 @@ class OnlineGmViewController: JSQMessagesViewController {
         
         SVProgressHUD.show(withStatus: "連線中")
         ref.child("onlineGm").observe(.childAdded, with: { (snapShots) in
-            print("TEST")
             if let message = snapShots.value as? Dictionary<String, AnyObject> {
                 self.messageArray.append(message)
                 self.finishReceivingMessage(animated: true)
                 SVProgressHUD.dismiss()
             }
         })
+        inputToolbar.contentView?.textView?.placeHolder = "請輸入訊息"
+        inputToolbar.contentView?.rightBarButtonItem?.setTitle("送出", for: .normal)
+        inputToolbar.contentView?.leftBarButtonItem = nil
     }
     
     override func viewWillDisappear(_ animated: Bool) {

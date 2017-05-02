@@ -85,7 +85,7 @@ class ExamListTableViewController: UITableViewController {
         
         let tempLabel = UILabel(frame: CGRect(x: 15, y: 3, width: view.frame.width, height: 20))
         
-        tempLabel.textColor = UIColor(red: 149.0/255.0, green: 173.0/255.0, blue: 97/255.0, alpha: 1)
+        tempLabel.textColor = UIColor(red: 157.0/255.0, green: 201.0/255.0, blue: 0/255.0, alpha: 1)
         
         switch section {
         case 0:

@@ -9,7 +9,7 @@
 import UIKit
 import SVProgressHUD
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UISearchBarDelegate {
 
     @IBOutlet weak var segmented: UISegmentedControl!
     @IBOutlet weak var examContainerVew: UIView!
@@ -20,6 +20,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var sideMenuView: UIView!
     @IBOutlet weak var leadingContain: NSLayoutConstraint!
     var sideMenuShowing = false
+    
+    let searchBar = UISearchBar()
     
 //    var maindata: Maindata!
     var id: String!
@@ -53,6 +55,10 @@ class MainViewController: UIViewController {
         let notiLogoutButton = Notification.Name("LogotAccount")
         NotificationCenter.default.addObserver(self, selector: #selector(logout), name: notiLogoutButton, object: nil)
         
+        searchBar.placeholder = "請輸入搜尋文字"
+        searchBar.showsCancelButton = true
+        searchBar.delegate = self
+        navigationItem.titleView = searchBar
 
         // Do any additional setup after loading the view.
         Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { _ in
@@ -72,6 +78,11 @@ class MainViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        searchBar.resignFirstResponder()
     }
     
     func selected(noti: Notification) {
@@ -97,6 +108,7 @@ class MainViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        searchBar.resignFirstResponder()
         if segue.identifier == "Detail" {
             let destinationController = segue.destination as! DetailViewController
 //            destinationController.maindata = maindata
@@ -116,6 +128,8 @@ class MainViewController: UIViewController {
             
             examContainerVew.isUserInteractionEnabled = true
         } else {
+            searchBar.resignFirstResponder()
+            
             leadingContain.constant = 0
             
             UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: {
