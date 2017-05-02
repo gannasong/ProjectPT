@@ -65,7 +65,7 @@ class MainViewController: UIViewController, UISearchBarDelegate {
             MaindataManager.shareInstance().callAPI {
                 DispatchQueue.main.async {
                     NotificationCenter.default.post(name: Notification.Name("reload"), object: nil)
-                    SVProgressHUD.dismiss(withDelay: 1)
+                    SVProgressHUD.dismiss()
                 }
             }
         }

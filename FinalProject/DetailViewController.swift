@@ -11,6 +11,8 @@ import SVProgressHUD
 
 class DetailViewController: UIViewController {
     
+    @IBOutlet weak var joinButtonOutlet: UIButton!
+    
     let mm = MaindataManager.shareInstance()
     var id: String!
     var row: Int!
@@ -21,6 +23,16 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         let maindata = mm.getArray(id: id)[row]
         navigationItem.title = maindata.title
+        
+        let studentArray = maindata.contestant
+        let name = Auth.userInfoDic["name"] as! String
+        for student in studentArray {
+            if student["Contestant"] as! String == name {
+                joinButtonOutlet.isEnabled = false
+                joinButtonOutlet.setTitle("已參加", for: .normal)
+                joinButtonOutlet.backgroundColor = UIColor.gray
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,8 +50,11 @@ class DetailViewController: UIViewController {
                 if error != nil {
                     print(error!.localizedDescription)
                 } else {
-                    SVProgressHUD.showSuccess(withStatus: "已完成")
-                    SVProgressHUD.dismiss(withDelay: 1.5)
+                    DispatchQueue.main.async {
+                        SVProgressHUD.showSuccess(withStatus: "已完成")
+                        SVProgressHUD.dismiss(withDelay: 1.5)
+                        self.navigationController?.popViewController(animated: true)
+                    }
                 }
             })
             task.resume()

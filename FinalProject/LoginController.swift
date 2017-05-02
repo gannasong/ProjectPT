@@ -39,7 +39,7 @@ class LoginController: UIViewController {
         emailTextField.frame.origin = CGPoint(x: 20, y: 5)
         emailTextField.placeholder = "username"
         emailTextField.font = UIFont.systemFont(ofSize: 16)
-        emailTextField.textColor = UIColor(red: 157.0/255.0, green: 201.0/255.0, blue: 0, alpha: 1)
+        emailTextField.textColor = UIColor(red: 140.0/255.0, green: 180.0/255.0, blue: 1/255.0, alpha: 1)
         emailTextField.keyboardType = .emailAddress
         
         emailTextField.clearButtonMode = .whileEditing
@@ -49,7 +49,7 @@ class LoginController: UIViewController {
         pwTextField.frame.origin = CGPoint(x: 20, y: 5)
         pwTextField.placeholder = "username"
         pwTextField.font = UIFont.systemFont(ofSize: 16)
-        pwTextField.textColor = UIColor(red: 157.0/255.0, green: 201.0/255.0, blue: 0, alpha: 1)
+        pwTextField.textColor = UIColor(red: 140.0/255.0, green: 180.0/255.0, blue: 1/255.0, alpha: 1)
         pwTextField.isSecureTextEntry = true
         pwTextField.text = "P@ssw0rd"
         

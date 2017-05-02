@@ -44,15 +44,15 @@ class ExamListTableViewController: UITableViewController {
         webCollectionView.frame.size.height = size + 20
         
         let enlightenmentLayout = enlightenmentCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        enlightenmentLayout.itemSize = CGSize(width: size, height: size)
+        enlightenmentLayout.itemSize = CGSize(width: size, height: size + 140)
         let gameCollectionLayout = gameCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        gameCollectionLayout.itemSize = CGSize(width: size, height: size)
+        gameCollectionLayout.itemSize = CGSize(width: size, height: size + 140)
         let iOSCollectionLayout = iOSCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        iOSCollectionLayout.itemSize = CGSize(width: size, height: size)
+        iOSCollectionLayout.itemSize = CGSize(width: size, height: size + 140)
         let androidCollectionLayout = androidCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        androidCollectionLayout.itemSize = CGSize(width: size, height: size)
+        androidCollectionLayout.itemSize = CGSize(width: size, height: size + 140)
         let webCollectionLayout = webCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        webCollectionLayout.itemSize = CGSize(width: size, height: size)
+        webCollectionLayout.itemSize = CGSize(width: size, height: size + 140)
         
         NotificationCenter.default.addObserver(self, selector: #selector(reload), name: Notification.Name("reload"), object: nil)
     }
@@ -71,7 +71,7 @@ class ExamListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return view.frame.width * 0.6 + 20
+        return view.frame.width * 0.6 + 160
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -85,7 +85,7 @@ class ExamListTableViewController: UITableViewController {
         
         let tempLabel = UILabel(frame: CGRect(x: 15, y: 3, width: view.frame.width, height: 20))
         
-        tempLabel.textColor = UIColor(red: 157.0/255.0, green: 201.0/255.0, blue: 0/255.0, alpha: 1)
+        tempLabel.textColor = UIColor(red: 140.0/255.0, green: 180.0/255.0, blue: 1/255.0, alpha: 1)
         
         switch section {
         case 0:
@@ -132,6 +132,16 @@ extension ExamListTableViewController: UICollectionViewDataSource, UICollectionV
         
         cell.titleLabel.text = maindata.title
         cell.backgroundColor = UIColor.clear
+        
+        cell.teacherImageView.layer.cornerRadius = 25
+        cell.teacherImageView.contentMode = .scaleAspectFit
+        
+        let week = ["一週前", "二週前", "三週前"]
+        let random = Int(arc4random_uniform(3))
+        cell.weekLabel.text = week[random]
+        
+        cell.likeLabel.text = "\(arc4random_uniform(40) + 1)"
+        cell.commentLabel.text = "\(arc4random_uniform(40) + 1)"
         
         return cell
     }

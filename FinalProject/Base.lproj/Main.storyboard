@@ -39,7 +39,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="哥布林程式教育學苑" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqB-YI-1fx">
                                             <rect key="frame" x="105.5" y="205.5" width="165.5" height="22.5"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                            <color key="textColor" red="0.61590898036956787" green="0.78722578287124634" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="textColor" red="0.54938109053600848" green="0.70409912943209285" blue="0.0023651060808883616" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                             <color key="shadowColor" red="0.84132498502731323" green="0.94728332757949829" blue="0.48747867345809937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <size key="shadowOffset" width="0.0" height="1"/>
@@ -56,22 +56,23 @@
                                             </subviews>
                                         </stackView>
                                         <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CU1-HU-WxG">
-                                            <rect key="frame" x="126" y="438" width="123" height="30"/>
+                                            <rect key="frame" x="117.5" y="439" width="140" height="32"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                             <state key="normal" title="Forgot Password?">
-                                                <color key="titleColor" red="0.61590898039999997" green="0.7872257829" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="titleColor" red="0.54938109049999995" green="0.70409912939999997" blue="0.0023651060810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
                                         </button>
                                         <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBtnSlider" translatesAutoresizingMaskIntoConstraints="NO" id="3tp-ol-bEe">
                                             <rect key="frame" x="37" y="569" width="300" height="50"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="記住帳號" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x25-vq-sWH">
-                                            <rect key="frame" x="153" y="401.5" width="69.5" height="20.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.69546365740000005" green="0.79005515579999996" blue="0.36076581479999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <rect key="frame" x="151" y="401.5" width="73.5" height="21.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" red="0.54938109049999995" green="0.70409912939999997" blue="0.0023651060810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Uy-9R-RpF">
-                                            <rect key="frame" x="120" y="399" width="25" height="25"/>
+                                            <rect key="frame" x="118" y="399.5" width="25" height="25"/>
                                             <state key="normal" image="check01">
                                                 <color key="titleColor" red="0.69546365740000005" green="0.79005515579999996" blue="0.36076581479999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </state>
@@ -126,7 +127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" id="Kev-hZ-JI8">
-                    <rect key="frame" x="0.0" y="-1" width="295" height="31"/>
+                    <rect key="frame" x="0.0" y="0.0" width="295" height="31"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <color key="minimumTrackTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -372,7 +373,7 @@
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAa-F5-EkM">
                                 <rect key="frame" x="0.0" y="600.5" width="375" height="66.5"/>
-                                <color key="backgroundColor" red="0.66094267370000004" green="0.88431781529999998" blue="0.48232781889999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.54938109049999995" green="0.70409912939999997" blue="0.0023651060810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="參加測驗">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -395,6 +396,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RQ3-1F-OgY"/>
+                    <connections>
+                        <outlet property="joinButtonOutlet" destination="BAa-F5-EkM" id="ELU-ov-82l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kai-PX-PSF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -601,7 +605,7 @@
         <scene sceneID="qaD-lj-Gwq">
             <objects>
                 <collectionViewController id="zj9-9u-alb" customClass="StudentsCollectionViewController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="joD-rW-pCz">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="joD-rW-pCz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -694,7 +698,7 @@
                                     <segment title="測驗列表"/>
                                     <segment title="課程列表"/>
                                 </segments>
-                                <color key="tintColor" red="0.61590898039999997" green="0.7872257829" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.54938109049999995" green="0.70409912939999997" blue="0.0023651060810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="segmented:" destination="PhF-9R-dLb" eventType="valueChanged" id="mxa-wN-Fco"/>
                                 </connections>
@@ -739,7 +743,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="fAF-U8-B3r">
                         <barButtonItem key="leftBarButtonItem" image="topBarIcon" id="ZjP-D1-Xsh">
-                            <color key="tintColor" red="0.61590898039999997" green="0.7872257829" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.54938109049999995" green="0.70409912939999997" blue="0.0023651060810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="openSideMemu:" destination="PhF-9R-dLb" id="yVv-wH-Iix"/>
                             </connections>
@@ -781,18 +785,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photoalbum" translatesAutoresizingMaskIntoConstraints="NO" id="1Xc-fA-mUZ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="187" height="169.5"/>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XD7-E1-KE6">
-                                                    <rect key="frame" x="-27" y="0.0" width="214" height="603"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <rect key="frame" x="16" y="16" width="155" height="137.5"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="1Xc-fA-mUZ" secondAttribute="trailing" id="2ku-xg-J4L"/>
-                                                <constraint firstItem="1Xc-fA-mUZ" firstAttribute="top" secondItem="3te-yX-eH7" secondAttribute="top" id="5AI-YE-q7G"/>
-                                                <constraint firstItem="1Xc-fA-mUZ" firstAttribute="leading" secondItem="3te-yX-eH7" secondAttribute="leading" id="Hrm-hb-I2X"/>
-                                                <constraint firstAttribute="bottom" secondItem="1Xc-fA-mUZ" secondAttribute="bottom" id="fle-Js-Ue7"/>
+                                                <constraint firstAttribute="trailing" secondItem="1Xc-fA-mUZ" secondAttribute="trailing" constant="16" id="2ku-xg-J4L"/>
+                                                <constraint firstItem="1Xc-fA-mUZ" firstAttribute="top" secondItem="3te-yX-eH7" secondAttribute="top" constant="16" id="5AI-YE-q7G"/>
+                                                <constraint firstItem="1Xc-fA-mUZ" firstAttribute="leading" secondItem="3te-yX-eH7" secondAttribute="leading" constant="16" id="Hrm-hb-I2X"/>
+                                                <constraint firstAttribute="bottom" secondItem="1Xc-fA-mUZ" secondAttribute="bottom" constant="16" id="fle-Js-Ue7"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
@@ -806,6 +806,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0Y-14-Nvl">
                                                     <rect key="frame" x="65" y="7" width="62" height="30"/>
+                                                    <color key="tintColor" red="0.54938109049999995" green="0.70409912939999997" blue="0.0023651060810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="個人資訊"/>
                                                     <connections>
                                                         <action selector="editUserButton:" destination="Twb-HQ-AoL" eventType="touchUpInside" id="1ca-6J-yCt"/>
@@ -838,6 +839,7 @@
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZo-pE-8bW">
                                                     <rect key="frame" x="65" y="6" width="62" height="30"/>
+                                                    <color key="tintColor" red="0.54938109049999995" green="0.70409912939999997" blue="0.0023651060810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="聯絡我們"/>
                                                     <connections>
                                                         <action selector="sendEmailButton:" destination="Twb-HQ-AoL" eventType="touchUpInside" id="48h-Iw-N3b"/>
@@ -865,6 +867,7 @@
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47G-Ui-tp3">
                                                     <rect key="frame" x="65" y="6" width="62" height="30"/>
+                                                    <color key="tintColor" red="0.54938109049999995" green="0.70409912939999997" blue="0.0023651060810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="學院規章"/>
                                                     <connections>
                                                         <action selector="settingSystemButton:" destination="Twb-HQ-AoL" eventType="touchUpInside" id="ZSz-V9-hCf"/>
@@ -892,6 +895,7 @@
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZxZ-5V-Sqf">
                                                     <rect key="frame" x="65" y="6" width="62" height="30"/>
+                                                    <color key="tintColor" red="0.54938109049999995" green="0.70409912939999997" blue="0.0023651060810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="線上客服"/>
                                                     <connections>
                                                         <action selector="onlineGMButton:" destination="Twb-HQ-AoL" eventType="touchUpInside" id="hQH-Gc-psr"/>
@@ -922,6 +926,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="q83-2q-X3u" secondAttribute="height" multiplier="2" id="5a0-oF-Qqk"/>
                                                     </constraints>
+                                                    <color key="tintColor" red="0.54938109049999995" green="0.70409912939999997" blue="0.0023651060810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="登出"/>
                                                     <connections>
                                                         <action selector="logoutButton:" destination="Twb-HQ-AoL" eventType="touchUpInside" id="rzv-AU-ip2"/>
@@ -1335,7 +1340,7 @@
                                             <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fvd-wh-o02">
-                                            <rect key="frame" x="25" y="15" width="80" height="14.5"/>
+                                            <rect key="frame" x="25" y="15" width="30.5" height="14.5"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -1348,7 +1353,6 @@
                                         <constraint firstItem="Fvd-wh-o02" firstAttribute="leading" secondItem="06w-Ea-IiQ" secondAttribute="leading" constant="25" id="JbC-iF-pbj"/>
                                         <constraint firstItem="PgI-6b-0aN" firstAttribute="top" secondItem="06w-Ea-IiQ" secondAttribute="top" id="g3V-jO-JON"/>
                                         <constraint firstItem="PgI-6b-0aN" firstAttribute="leading" secondItem="06w-Ea-IiQ" secondAttribute="leading" id="n5e-hA-UYz"/>
-                                        <constraint firstAttribute="trailing" secondItem="Fvd-wh-o02" secondAttribute="trailing" constant="270" id="pao-LG-2NV"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
