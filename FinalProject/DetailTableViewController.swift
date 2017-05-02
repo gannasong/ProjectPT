@@ -11,7 +11,7 @@ import UIKit
 class DetailTableViewController: UITableViewController {
     
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
+    
     @IBOutlet weak var creditLabel: UILabel!
     @IBOutlet weak var startLabel: UILabel!
     @IBOutlet weak var dueLabel: UILabel!
@@ -40,7 +40,7 @@ class DetailTableViewController: UITableViewController {
             self.imageView.image = image
         }
         
-        titleLabel.text = maindata.title
+        
         startLabel.text = maindata.start_date
         dueLabel.text = maindata.due_date
         teacherLabel.text = maindata.organiser

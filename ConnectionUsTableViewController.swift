@@ -50,7 +50,7 @@ class ConnectionUsTableViewController: UITableViewController, MFMailComposeViewC
     
     //專員手機
     @IBAction func connectionMobile(_ sender: UIButton) {
-        let url:NSURL = URL(string: "TEL:0988238583")! as NSURL
+        let url:NSURL = URL(string: "TEL:0939287209")! as NSURL
         UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
     }
     

@@ -22,33 +22,45 @@ class LoginController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let getEmail = UserDefaults.standard.string(forKey: "email") {
+            checkReUser = true
+            rememberButton.setImage(UIImage(named: "check02"), for: .normal)
+            emailTextField.text = getEmail
+        } else {
+            checkReUser = false
+            rememberButton.setImage(UIImage(named: "check01"), for: .normal)
+        }
+        
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
         
-        emailTextField.frame.size = CGSize(width: emailImageView.frame.width * 0.8, height: emailImageView.frame.height * 0.8)
-        emailTextField.center = emailImageView.center
+        emailTextField.frame.size = CGSize(width: emailImageView.frame.width, height: emailImageView.frame.height * 0.8)
+        emailTextField.frame.origin = CGPoint(x: 20, y: 5)
         emailTextField.placeholder = "username"
         emailTextField.font = UIFont.systemFont(ofSize: 16)
         emailTextField.textColor = UIColor(red: 157.0/255.0, green: 201.0/255.0, blue: 0, alpha: 1)
         emailTextField.keyboardType = .emailAddress
+        
+        emailTextField.clearButtonMode = .whileEditing
         emailImageView.addSubview(emailTextField)
         
-        pwTextField.frame.size = CGSize(width: pwImageView.frame.width * 0.8, height: pwImageView.frame.height * 0.8)
-        pwTextField.center = emailImageView.center
+        pwTextField.frame.size = CGSize(width: pwImageView.frame.width, height: pwImageView.frame.height * 0.8)
+        pwTextField.frame.origin = CGPoint(x: 20, y: 5)
         pwTextField.placeholder = "username"
         pwTextField.font = UIFont.systemFont(ofSize: 16)
         pwTextField.textColor = UIColor(red: 157.0/255.0, green: 201.0/255.0, blue: 0, alpha: 1)
         pwTextField.isSecureTextEntry = true
         pwTextField.text = "P@ssw0rd"
+        
+        pwTextField.clearButtonMode = .whileEditing
+        
         pwImageView.addSubview(pwTextField)
         
         loginSlider.setThumbImage(UIImage(named: "loginBtn"), for: .normal)
         loginSlider.frame.size.width = view.frame.width * 0.8
         loginSlider.frame.origin = CGPoint(x: 0, y: 10)
         loginImageView.addSubview(loginSlider)
-        
-        if let email = UserDefaults.standard.string(forKey: "email") {
-            emailTextField.text = email
-        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -89,7 +101,12 @@ class LoginController: UIViewController {
                     alert.addAction(alertAction)
                     self.present(alert, animated: true, completion: nil)
                 } else {
-                    UserDefaults.standard.set(self.emailTextField.text!, forKey: "email")
+                    if self.checkReUser {
+                        UserDefaults.standard.set(self.emailTextField.text!, forKey: "email")
+                    } else {
+                        UserDefaults.standard.set(nil, forKey: "email")
+                    }
+                    
                     SVProgressHUD.showSuccess(withStatus: "登入成功")
                     self.performSegue(withIdentifier: "Login", sender: self)
                 }
@@ -97,5 +114,21 @@ class LoginController: UIViewController {
         }
     }
 
+    var checkReUser:Bool!
+    @IBOutlet weak var rememberButton: UIButton!
+    
+    @IBAction func rememberButton(_ sender: UIButton) {
+        if checkReUser {
+            sender.setImage(UIImage(named: "check01"), for: .normal)
+        } else {
+            sender.setImage(UIImage(named: "check02"), for: .normal)
+        }
+        checkReUser = !checkReUser
+    }
+    
+    
+    
+    
+    
 }
 

@@ -21,21 +21,20 @@ class SideMenuTableViewController: UITableViewController{
         //隔線消失
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         //頭像設置
-        sideUserImage.layer.cornerRadius = sideUserImage.frame.width / 2
-        sideUserImage.contentMode = .scaleAspectFill
-        sideUserImage.clipsToBounds = true
+        //sideUserImage.layer.cornerRadius = sideUserImage.frame.width / 2
+        sideUserImage.contentMode = .scaleAspectFit
+        //sideUserImage.clipsToBounds = true
+        sideUserImage.image = UIImage(named: "goblinLogo")
         
-        sideUserNameLabel.text = Auth.userInfoDic["name"] as? String
-        if let tryImage = Auth.userInfoDic["file_location"]!["medium"] as? Dictionary<String,String> {
-            if let getImageUrlString = tryImage["url"] {
-                mm.getImage(urlString: getImageUrlString, completion: { (image) in
-                    self.sideUserImage.image = image
-                })
-                
-                
-            }
-        }
-        
+//        if let tryImage = Auth.userInfoDic["file_location"]!["medium"] as? Dictionary<String,String> {
+//            if let getImageUrlString = tryImage["url"] {
+//                mm.getImage(urlString: getImageUrlString, completion: { (image) in
+//                    self.sideUserImage.image = image
+//                })
+//                
+//                
+//            }
+//        }
         
     }
 

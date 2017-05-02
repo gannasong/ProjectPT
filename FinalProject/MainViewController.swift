@@ -55,7 +55,7 @@ class MainViewController: UIViewController, UISearchBarDelegate {
         let notiLogoutButton = Notification.Name("LogotAccount")
         NotificationCenter.default.addObserver(self, selector: #selector(logout), name: notiLogoutButton, object: nil)
         
-        searchBar.placeholder = "請輸入搜尋文字"
+        searchBar.placeholder = "搜尋測驗"
         searchBar.showsCancelButton = true
         searchBar.delegate = self
         navigationItem.titleView = searchBar
@@ -101,9 +101,11 @@ class MainViewController: UIViewController, UISearchBarDelegate {
         if sender.selectedSegmentIndex == 0 {
             examContainerVew.isHidden = false
             lessonContainerView.isHidden = true
+            searchBar.placeholder = "搜尋測驗"
         } else {
             examContainerVew.isHidden = true
             lessonContainerView.isHidden = false
+            searchBar.placeholder = "搜尋課程"
         }
     }
     
