@@ -52,7 +52,7 @@ class OnlineGmViewController: JSQMessagesViewController {
     }
     
     override func senderDisplayName() -> String {
-        return Auth.token
+        return Auth.userInfoDic["name"] as! String
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

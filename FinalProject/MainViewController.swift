@@ -55,6 +55,7 @@ class MainViewController: UIViewController, UISearchBarDelegate {
         let notiLogoutButton = Notification.Name("LogotAccount")
         NotificationCenter.default.addObserver(self, selector: #selector(logout), name: notiLogoutButton, object: nil)
         
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).title = "取消"
         searchBar.placeholder = "搜尋測驗"
         searchBar.showsCancelButton = true
         searchBar.delegate = self

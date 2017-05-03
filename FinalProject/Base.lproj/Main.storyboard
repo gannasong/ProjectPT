@@ -56,9 +56,9 @@
                                             </subviews>
                                         </stackView>
                                         <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CU1-HU-WxG">
-                                            <rect key="frame" x="117.5" y="439" width="140" height="32"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                            <state key="normal" title="Forgot Password?">
+                                            <rect key="frame" x="146" y="439" width="83" height="34"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <state key="normal" title="忘記密碼?">
                                                 <color key="titleColor" red="0.54938109049999995" green="0.70409912939999997" blue="0.0023651060810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
                                         </button>
@@ -809,7 +809,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEa-Wy-vq5">
                                 <rect key="frame" x="0.0" y="64" width="187" height="603"/>
                                 <connections>
-                                    <segue destination="Twb-HQ-AoL" kind="embed" id="OZa-Tm-Gup"/>
+                                    <segue destination="hkb-ag-zLg" kind="embed" id="wfT-lz-ZRx"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -861,10 +861,10 @@
         <scene sceneID="jOk-Ux-lnu">
             <objects>
                 <tableViewController id="Twb-HQ-AoL" customClass="SideMenuTableViewController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" alpha="0.69999999999999996" contentMode="scaleToFill" bounces="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ktv-cM-7ur">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ktv-cM-7ur">
                         <rect key="frame" x="0.0" y="0.0" width="187" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <sections>
                             <tableViewSection id="GPJ-GC-8Na">
                                 <cells>
@@ -886,6 +886,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="1Xc-fA-mUZ" secondAttribute="bottom" constant="16" id="fle-Js-Ue7"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="4bm-wG-25f">
@@ -898,7 +899,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0Y-14-Nvl">
                                                     <rect key="frame" x="65" y="7" width="62" height="30"/>
                                                     <color key="tintColor" red="0.54938109049999995" green="0.70409912939999997" blue="0.0023651060810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <state key="normal" title="個人資訊"/>
+                                                    <state key="normal" title="學員資訊"/>
                                                     <connections>
                                                         <action selector="editUserButton:" destination="Twb-HQ-AoL" eventType="touchUpInside" id="1ca-6J-yCt"/>
                                                     </connections>
@@ -916,6 +917,7 @@
                                                 <constraint firstItem="g9c-LF-JkL" firstAttribute="top" secondItem="umT-0y-bXs" secondAttribute="top" constant="5" id="ufP-7J-rvO"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="kRs-ZO-I4y">
@@ -944,6 +946,7 @@
                                                 <constraint firstItem="0vI-jX-HlX" firstAttribute="leading" secondItem="TQx-y7-JSd" secondAttribute="leading" constant="20" id="pOj-3a-hi4"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="cdl-kc-B6G">
@@ -972,6 +975,7 @@
                                                 <constraint firstItem="gaK-J2-GXR" firstAttribute="leading" secondItem="2ef-I4-V1q" secondAttribute="leading" constant="20" id="nD8-dJ-KPE"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="E9G-hD-0QM">
@@ -987,7 +991,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZxZ-5V-Sqf">
                                                     <rect key="frame" x="65" y="6" width="62" height="30"/>
                                                     <color key="tintColor" red="0.54938109049999995" green="0.70409912939999997" blue="0.0023651060810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <state key="normal" title="線上客服"/>
+                                                    <state key="normal" title="聯絡老師"/>
                                                     <connections>
                                                         <action selector="onlineGMButton:" destination="Twb-HQ-AoL" eventType="touchUpInside" id="hQH-Gc-psr"/>
                                                     </connections>
@@ -1000,6 +1004,7 @@
                                                 <constraint firstItem="ygt-Ob-YBU" firstAttribute="centerY" secondItem="hVy-6a-Ji1" secondAttribute="centerY" id="t45-4n-YNZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="VCi-xq-Iat">
@@ -1031,6 +1036,7 @@
                                                 <constraint firstItem="OvC-sL-1l4" firstAttribute="leading" secondItem="YEt-DQ-oCy" secondAttribute="leading" constant="20" id="sju-6v-uyH"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                     </tableViewCell>
                                 </cells>
@@ -1047,9 +1053,49 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cp7-wa-6t0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-114.40000000000001" y="870.31484257871068"/>
+            <point key="canvasLocation" x="-260" y="865"/>
         </scene>
-        <!--個人資訊-->
+        <!--View Controller-->
+        <scene sceneID="AQz-Wb-Rn2">
+            <objects>
+                <viewController id="hkb-ag-zLg" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rmB-P9-hka"/>
+                        <viewControllerLayoutGuide type="bottom" id="Khz-mv-g5t"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5AG-tA-bNp">
+                        <rect key="frame" x="0.0" y="0.0" width="187" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu" translatesAutoresizingMaskIntoConstraints="NO" id="6px-37-qnq">
+                                <rect key="frame" x="0.0" y="0.0" width="187" height="603"/>
+                            </imageView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5aE-ST-cu2">
+                                <rect key="frame" x="0.0" y="0.0" width="187" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="Twb-HQ-AoL" kind="embed" id="3Zk-CS-aU1"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Khz-mv-g5t" firstAttribute="top" secondItem="6px-37-qnq" secondAttribute="bottom" id="58R-8w-KpI"/>
+                            <constraint firstItem="6px-37-qnq" firstAttribute="leading" secondItem="5AG-tA-bNp" secondAttribute="leading" id="DSH-ro-3VF"/>
+                            <constraint firstAttribute="trailing" secondItem="6px-37-qnq" secondAttribute="trailing" id="EQX-eU-ITC"/>
+                            <constraint firstItem="Khz-mv-g5t" firstAttribute="top" secondItem="5aE-ST-cu2" secondAttribute="bottom" id="FjP-Yh-5vg"/>
+                            <constraint firstItem="5aE-ST-cu2" firstAttribute="top" secondItem="rmB-P9-hka" secondAttribute="bottom" id="bZ6-Xe-CwE"/>
+                            <constraint firstItem="6px-37-qnq" firstAttribute="top" secondItem="rmB-P9-hka" secondAttribute="bottom" id="bbP-Vf-OwY"/>
+                            <constraint firstItem="5aE-ST-cu2" firstAttribute="leading" secondItem="5AG-tA-bNp" secondAttribute="leading" id="g98-5n-lV5"/>
+                            <constraint firstAttribute="trailing" secondItem="5aE-ST-cu2" secondAttribute="trailing" id="zav-zv-k6g"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QTg-Sr-D8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="296.80000000000001" y="814.54272863568224"/>
+        </scene>
+        <!--學員資訊-->
         <scene sceneID="Ptq-DK-2tr">
             <objects>
                 <tableViewController id="Gbj-MN-H6r" customClass="UserInfoTableViewController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -1267,7 +1313,7 @@
                             <outlet property="delegate" destination="Gbj-MN-H6r" id="tyW-uT-X3e"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="個人資訊" id="D8W-LA-sfO">
+                    <navigationItem key="navigationItem" title="學員資訊" id="D8W-LA-sfO">
                         <barButtonItem key="leftBarButtonItem" title="返回" id="4Qr-8b-OI6">
                             <connections>
                                 <action selector="backButton:" destination="Gbj-MN-H6r" id="XoA-pA-SM3"/>
@@ -1401,7 +1447,7 @@
             </objects>
             <point key="canvasLocation" x="1150" y="2469"/>
         </scene>
-        <!--Setting Table View Controller-->
+        <!--學院規章-->
         <scene sceneID="Vzh-6y-gHm">
             <objects>
                 <tableViewController id="kT9-O5-6CF" customClass="SettingTableViewController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -1457,7 +1503,7 @@
                             <outlet property="delegate" destination="kT9-O5-6CF" id="Tpk-bA-Q6C"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="kmv-lM-WER">
+                    <navigationItem key="navigationItem" title="學院規章" id="kmv-lM-WER">
                         <barButtonItem key="leftBarButtonItem" title="返回" id="8O3-Ac-wcK">
                             <connections>
                                 <action selector="backButton:" destination="kT9-O5-6CF" id="dJs-Wu-DrZ"/>
@@ -1472,7 +1518,7 @@
             </objects>
             <point key="canvasLocation" x="2089" y="2469"/>
         </scene>
-        <!--Online Gm View Controller-->
+        <!--聯絡老師-->
         <scene sceneID="6sW-5c-XuJ">
             <objects>
                 <viewController id="3KJ-nI-lP9" customClass="OnlineGmViewController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -1485,7 +1531,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Qyu-oc-aY8">
+                    <navigationItem key="navigationItem" title="聯絡老師" id="Qyu-oc-aY8">
                         <barButtonItem key="leftBarButtonItem" title="返回" id="3lU-LL-H8m">
                             <connections>
                                 <action selector="backButton:" destination="3KJ-nI-lP9" id="hH8-Xe-lV6"/>
@@ -1605,6 +1651,7 @@
         <image name="loginBtnSlider" width="320" height="50"/>
         <image name="loginImg" width="375" height="667"/>
         <image name="logo" width="155" height="128"/>
+        <image name="menu" width="215" height="603"/>
         <image name="menuGM" width="25" height="25"/>
         <image name="menuLogout" width="25" height="25"/>
         <image name="menuMail" width="25" height="25"/>
