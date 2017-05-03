@@ -13,21 +13,27 @@ class Maindata {
     var title = ""
     var start_date = ""
     var due_date = ""
-    var organiser = ""
-    var phone = ""
-    var email = ""
+    var test_date = ""
+    var test_id = ""
+    var test_people = ""
+    var quota_places = ""
+    var test_cost = ""
+    var content = ""
     var image: Dictionary<String, AnyObject> = [:]
     var category: [Dictionary<String, AnyObject>] = []
     var contestant: [Dictionary<String, AnyObject>] = []
     
-    init(id: Int, title:String, start_date:String,due_date:String, organiser: String, phone: String, email: String, image: Dictionary<String, AnyObject>, category: [Dictionary<String, AnyObject>], contestant: [Dictionary<String, AnyObject>]) {
+    init(id: Int, title:String, start_date:String,due_date:String, test_date: String, test_id: String, test_people: String, quota_places: String, test_cost: String, content: String, image: Dictionary<String, AnyObject>, category: [Dictionary<String, AnyObject>], contestant: [Dictionary<String, AnyObject>]) {
         self.id = id
         self.title = title
         self.start_date = start_date
         self.due_date = due_date
-        self.organiser = organiser
-        self.phone = phone
-        self.email = email
+        self.test_date = test_date
+        self.test_id = test_id
+        self.test_people = test_people
+        self.quota_places = quota_places
+        self.test_cost = test_cost
+        self.content = content
         self.image = image
         self.category = category
         self.contestant = contestant
@@ -52,7 +58,7 @@ class MaindataManager {
     private var imageDict: Dictionary<String, UIImage> = [:]
     
     private init() {
-        maindata = Maindata.init(id: 0, title: "", start_date: "", due_date: "", organiser: "", phone: "", email: "", image: [:], category: [], contestant: [])
+        maindata = Maindata.init(id: 0, title: "", start_date: "", due_date: "", test_date: "", test_id: "", test_people: "", quota_places: "", test_cost: "", content: "", image: [:], category: [], contestant: [])
         enlightenmentArray = []
         gameArray = []
         iOSArray = []
@@ -80,7 +86,7 @@ class MaindataManager {
 
                                 for i in 0..<jsonArray.count {
                                     if let item = jsonArray[i] as? Dictionary<String, AnyObject> {
-                                        let maindata = Maindata(id: item["id"] as! Int, title: item["title"] as! String, start_date: item["start_date"] as! String, due_date: item["due_date"] as! String, organiser: item["organiser"] as! String, phone: item["phone"] as! String, email: item["email"] as! String, image: item["image"] as! Dictionary<String, AnyObject>, category: item["category"] as! [Dictionary<String, AnyObject>], contestant: item["Contestant"] as! [Dictionary<String, AnyObject>])
+                                        let maindata = Maindata(id: item["id"] as! Int, title: item["title"] as! String, start_date: item["start_date"] as! String, due_date: item["due_date"] as! String, test_date: item["test_date"] as! String, test_id: item["test_id"] as! String, test_people: item["test_people"] as! String, quota_places: item["quota_places"] as! String, test_cost: item["test_cost"] as! String, content: item["content"] as! String, image: item["image"] as! Dictionary<String, AnyObject>, category: item["category"] as! [Dictionary<String, AnyObject>], contestant: item["Contestant"] as! [Dictionary<String, AnyObject>])
                                         let category = maindata.category[0]
                                         switch category["category"] as! String {
                                         case "程式啟蒙":

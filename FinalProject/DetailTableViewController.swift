@@ -11,13 +11,14 @@ import UIKit
 class DetailTableViewController: UITableViewController {
     
     @IBOutlet weak var imageView: UIImageView!
-    
-    @IBOutlet weak var creditLabel: UILabel!
-    @IBOutlet weak var startLabel: UILabel!
-    @IBOutlet weak var dueLabel: UILabel!
-    @IBOutlet weak var teacherLabel: UILabel!
-    @IBOutlet weak var phoneLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var test_idLabel: UILabel!
+    @IBOutlet weak var test_peopleLabel: UILabel!
+    @IBOutlet weak var start_dateLabel: UILabel!
+    @IBOutlet weak var due_dateLabel: UILabel!
+    @IBOutlet weak var test_dateLabel: UILabel!
+    @IBOutlet weak var test_costLabel: UILabel!
+    @IBOutlet weak var quota_placesLabel: UILabel!
+    @IBOutlet weak var contentLabel: UILabel!
     
     let mm = MaindataManager.shareInstance()
 //    var maindata: Maindata!
@@ -41,11 +42,16 @@ class DetailTableViewController: UITableViewController {
         }
         
         
-        startLabel.text = maindata.start_date
-        dueLabel.text = maindata.due_date
-        teacherLabel.text = maindata.organiser
-        phoneLabel.text = maindata.phone
-        emailLabel.text = maindata.email
+        test_idLabel.text = maindata.test_id
+        test_peopleLabel.text = maindata.test_people
+        start_dateLabel.text = maindata.start_date
+        due_dateLabel.text = maindata.due_date
+        test_dateLabel.text = maindata.test_date
+        test_costLabel.text = maindata.test_cost
+        quota_placesLabel.text = maindata.quota_places
+        contentLabel.text = maindata.content
+        
+        tableView.estimatedRowHeight = 44
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,7 +63,7 @@ class DetailTableViewController: UITableViewController {
         if indexPath.row == 0 {
             return view.frame.width * 0.8
         } else {
-            return tableView.rowHeight
+            return UITableViewAutomaticDimension
         }
     }
 
