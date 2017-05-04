@@ -136,12 +136,18 @@ extension ExamListTableViewController: UICollectionViewDataSource, UICollectionV
         cell.teacherImageView.layer.cornerRadius = 25
         cell.teacherImageView.contentMode = .scaleAspectFit
         
-        let week = ["一週前", "二週前", "三週前"]
-        let random = Int(arc4random_uniform(3))
-        cell.weekLabel.text = week[random]
-        
-        cell.likeLabel.text = "\(arc4random_uniform(40) + 1)"
-        cell.commentLabel.text = "\(arc4random_uniform(40) + 1)"
+        if collectionView.restorationIdentifier == "Enlightenment" {
+            cell.weekLabel.text = "數分鐘前"
+            cell.likeLabel.text = "0"
+            cell.commentLabel.text = "0"
+        } else {
+            let week = ["一週前", "二週前", "三週前"]
+            let random = Int(arc4random_uniform(3))
+            cell.weekLabel.text = week[random]
+            
+            cell.likeLabel.text = "\(arc4random_uniform(40) + 1)"
+            cell.commentLabel.text = "\(arc4random_uniform(40) + 1)"
+        }
         
         return cell
     }

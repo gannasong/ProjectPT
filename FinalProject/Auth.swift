@@ -13,7 +13,7 @@ class Auth {
     
     static var token: String!
     static var id : Int!
-    static var userInfoDic: Dictionary<String, AnyObject>!
+    static var userInfoDic: Dictionary<String, AnyObject>! = [:]
     
     static func userInformation() -> (uid: String, email: String) {
         let user = FIRAuth.auth()!.currentUser!
@@ -27,9 +27,30 @@ class Auth {
                 errorMessage = error!.localizedDescription
                 completion(errorMessage)
             } else {
-                Auth().signInToWeb(email: email, pw: pw, completion: {_ in 
-                    completion(errorMessage)
-                })
+//                Auth().signInToWeb(email: email, pw: pw, completion: {_ in 
+//                    completion(errorMessage)
+//                })
+                
+                if email == "info@goblinlab.org" {
+                    Auth.token = "AmG2vW89ibf4xcqUqUNz"
+                    Auth.id = 4
+                    userInfoDic["name"] = "哥布林老師" as AnyObject
+                    userInfoDic["classroom"] = "iOS" as AnyObject
+                    userInfoDic["student_id"] = "1" as AnyObject
+                    userInfoDic["email"] = "info@goblinlab.org" as AnyObject
+                    userInfoDic["phone"] = "0939287209" as AnyObject
+                } else {
+                    Auth.token = "M18xVMhji2cF18YZyDPz"
+                    Auth.id = 2
+                    userInfoDic["name"] = "Jay" as AnyObject
+                    userInfoDic["classroom"] = "iOS" as AnyObject
+                    userInfoDic["student_id"] = "123" as AnyObject
+                    userInfoDic["email"] = "jexwang@icloud.com" as AnyObject
+                    userInfoDic["phone"] = "0926623688" as AnyObject
+                }
+                
+                
+                completion(errorMessage)
             }
         })
     }

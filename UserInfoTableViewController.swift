@@ -40,16 +40,16 @@ class UserInfoTableViewController: UITableViewController,UINavigationControllerD
         emailLabel.text = Auth.userInfoDic["email"] as? String
         phoneLabel.text = Auth.userInfoDic["phone"] as? String
         
-        if let tryImage = Auth.userInfoDic["file_location"]!["medium"] as? Dictionary<String,String> {
-            if let getImageUrlString = tryImage["url"] {
-                mm.getImage(urlString: getImageUrlString, completion: { (image) in
-                    self.userImageView.image = image
-                    self.userImageView.contentMode = .scaleAspectFill
-                    self.userImageView.clipsToBounds = true
-                    
-                })
-            }
-        }
+//        if let tryImage = Auth.userInfoDic["file_location"]!["medium"] as? Dictionary<String,String> {
+//            if let getImageUrlString = tryImage["url"] {
+//                mm.getImage(urlString: getImageUrlString, completion: { (image) in
+//                    self.userImageView.image = image
+//                    self.userImageView.contentMode = .scaleAspectFill
+//                    self.userImageView.clipsToBounds = true
+//                    
+//                })
+//            }
+//        }
         
         
     }
