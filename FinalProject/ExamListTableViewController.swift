@@ -117,10 +117,14 @@ class ExamListTableViewController: UITableViewController {
                                 
                                 for i in 0..<jsonArray.count {
                                     if let item = jsonArray[i] as? Dictionary<String, AnyObject> {
-                                        let feedbackTemp = item["feedback"] as! [Dictionary<String, AnyObject>]
-                                        let feedbackDict = feedbackTemp[0]
-                                        let feedback = feedbackData(content: feedbackDict["content"]! as! String, feedbackDate: feedbackDict["feedback_date"] as! String, mood: feedbackDict["mood"] as! Int, interactive: feedbackDict["interactive"] as! Int, learn: feedbackDict["learn"] as! Int)
-                                        self.feedbackArray.append(feedback)
+                                        if item["name"] as! String == "Ember" {
+                                            let feedbackTemp = item["feedback"] as! [Dictionary<String, AnyObject>]
+//                                            let feedbackDict = feedbackTemp[0]
+                                            for feedbackDict in feedbackTemp {
+                                                let feedback = feedbackData(content: feedbackDict["content"]! as! String, feedbackDate: feedbackDict["feedback_date"] as! String, mood: feedbackDict["mood"] as! Int, interactive: feedbackDict["interactive"] as! Int, learn: feedbackDict["learn"] as! Int)
+                                                self.feedbackArray.append(feedback)
+                                            }   
+                                        }
                                     }
                                 }
                             }
@@ -185,7 +189,7 @@ class ExamListTableViewController: UITableViewController {
         let feedback = feedbackArray[indexPath.row]
         
         cell.feedbackLabel.text = feedback.content
-        cell.dateLabel.text = feedback.feedbackDate.components(separatedBy: "T")[0]
+        cell.dateLabel.text = feedback.feedbackDate
         
         for x in 1...5 {
             if x <= feedback.mood {
