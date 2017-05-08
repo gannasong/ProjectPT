@@ -106,6 +106,7 @@ class MaindataManager {
                                 }
                             }
                         }
+                        print("Get")
                         completion()
                     } catch {
                         print(error)

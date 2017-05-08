@@ -86,7 +86,14 @@ class OnlineGmViewController: JSQMessagesViewController {
         dateFormatter.dateFormat = "HH:mm"
         let date = dateFormatter.string(from: Date(timeIntervalSince1970: message["date"] as! TimeInterval))
         
-        let bubbleTopLabelString = "\(name) - \(date)"
+        let bubbleTopLabelString: String!
+        
+        if indexPath.row == 0 {
+            bubbleTopLabelString = "\(name)"
+        } else {
+            bubbleTopLabelString = "\(name) - \(date)"
+        }
+        
         return NSAttributedString(string: bubbleTopLabelString)
     }
     

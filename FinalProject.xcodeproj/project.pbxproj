@@ -17,6 +17,7 @@
 		8005DD881EAE15E1008C1C46 /* StudentsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8005DD871EAE15E1008C1C46 /* StudentsCollectionViewController.swift */; };
 		8005DD8A1EAE173A008C1C46 /* StudentsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8005DD891EAE173A008C1C46 /* StudentsCollectionViewCell.swift */; };
 		800732791EB62B4C0019EC52 /* OnlineGmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800732781EB62B4C0019EC52 /* OnlineGmViewController.swift */; };
+		802047981EBF394700DB582A /* FeedbackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802047971EBF394700DB582A /* FeedbackTableViewCell.swift */; };
 		802877131EB46A66009451F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 802877121EB46A66009451F8 /* GoogleService-Info.plist */; };
 		80E775041EAC6EEC009E553A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E775031EAC6EEC009E553A /* AppDelegate.swift */; };
 		80E775061EAC6EEC009E553A /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E775051EAC6EEC009E553A /* LoginController.swift */; };
@@ -46,6 +47,7 @@
 		8005DD871EAE15E1008C1C46 /* StudentsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentsCollectionViewController.swift; sourceTree = "<group>"; };
 		8005DD891EAE173A008C1C46 /* StudentsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentsCollectionViewCell.swift; sourceTree = "<group>"; };
 		800732781EB62B4C0019EC52 /* OnlineGmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnlineGmViewController.swift; sourceTree = "<group>"; };
+		802047971EBF394700DB582A /* FeedbackTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackTableViewCell.swift; sourceTree = "<group>"; };
 		802877121EB46A66009451F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		802877141EB46B50009451F8 /* FinalProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinalProject.entitlements; sourceTree = "<group>"; };
 		80E775001EAC6EEC009E553A /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,6 +184,7 @@
 				80E775231EAC94E0009E553A /* MainCollectionViewCell.swift */,
 				80E775251EAC96AD009E553A /* MainCollectionViewCell.xib */,
 				80E7751B1EAC85CB009E553A /* ExamListTableViewController.swift */,
+				802047971EBF394700DB582A /* FeedbackTableViewCell.swift */,
 				80E7751F1EAC87EE009E553A /* LessonTableViewController.swift */,
 			);
 			name = MainList;
@@ -345,6 +348,7 @@
 				80E775181EAC7BC4009E553A /* Library.swift in Sources */,
 				80E7751E1EAC86C0009E553A /* MainViewController.swift in Sources */,
 				80E7752A1EACA6EC009E553A /* DetailTableViewController.swift in Sources */,
+				802047981EBF394700DB582A /* FeedbackTableViewCell.swift in Sources */,
 				495D05401EB0F6BB00E8C293 /* UserInfoTableViewController.swift in Sources */,
 				80E7751C1EAC85CB009E553A /* ExamListTableViewController.swift in Sources */,
 				495D05481EB0F75900E8C293 /* SettingTableViewCell.swift in Sources */,
@@ -482,7 +486,7 @@
 				CODE_SIGN_ENTITLEMENTS = FinalProject/FinalProject.entitlements;
 				DEVELOPMENT_TEAM = YD5TB6T2X8;
 				INFOPLIST_FILE = FinalProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alphacamp.Goblinlab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -498,7 +502,7 @@
 				CODE_SIGN_ENTITLEMENTS = FinalProject/FinalProject.entitlements;
 				DEVELOPMENT_TEAM = YD5TB6T2X8;
 				INFOPLIST_FILE = FinalProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alphacamp.Goblinlab;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -108,6 +108,7 @@ class LoginController: UIViewController {
                     }
                     
                     SVProgressHUD.showSuccess(withStatus: "登入成功")
+                    SVProgressHUD.dismiss(withDelay: 1)
                     self.performSegue(withIdentifier: "Login", sender: self)
                 }
             }

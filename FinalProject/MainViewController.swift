@@ -59,21 +59,22 @@ class MainViewController: UIViewController, UISearchBarDelegate {
         searchBar.placeholder = "搜尋測驗"
         searchBar.showsCancelButton = true
         searchBar.delegate = self
+        searchBar.isHidden = true
         navigationItem.titleView = searchBar
 
         // Do any additional setup after loading the view.
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { _ in
-            MaindataManager.shareInstance().callAPI {
-                DispatchQueue.main.async {
-                    NotificationCenter.default.post(name: Notification.Name("reload"), object: nil)
-                    SVProgressHUD.dismiss()
-                }
-            }
-        }
+//        Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { _ in
+//            MaindataManager.shareInstance().callAPI {
+//                DispatchQueue.main.async {
+//                    NotificationCenter.default.post(name: Notification.Name("reload"), object: nil)
+//                    SVProgressHUD.dismiss()
+//                }
+//            }
+//        }
     
         NotificationCenter.default.addObserver(self, selector: #selector(selected(noti:)), name: Notification.Name("selected"), object: nil)
         
-        SVProgressHUD.show(withStatus: "讀取中")
+//        SVProgressHUD.show(withStatus: "讀取中")
     }
 
     override func didReceiveMemoryWarning() {
@@ -103,10 +104,13 @@ class MainViewController: UIViewController, UISearchBarDelegate {
             examContainerVew.isHidden = false
             lessonContainerView.isHidden = true
             searchBar.placeholder = "搜尋測驗"
+            searchBar.isHidden = true
         } else {
             examContainerVew.isHidden = true
             lessonContainerView.isHidden = false
             searchBar.placeholder = "搜尋課程"
+            searchBar.isHidden = false
+            NotificationCenter.default.post(name: Notification.Name("Lesson"), object: nil)
         }
     }
     
